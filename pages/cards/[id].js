@@ -14,8 +14,36 @@ const Cards = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main>
-                
+            <main className="flex flex-col w-full bg-slate-700 min-h-screen">
+                <section className="relative flex flex-col items-center w-full h-[50vh] boor">
+                    <div className="w-full">
+                        <img
+                            className="w-auto h-[40vh] object-fill bg-center"
+                            src="https://images2.content-hci.com/commimg/myhotcourses/blog/post/myhc_89683.jpg" alt="Background Image" />
+                    </div>
+                    {/* <div className="absolute bottom-0 bg-gray-300 p-2 rounded-full">
+                        <img
+                            className="rounded-full"
+                            src="https://media.licdn.com/dms/image/D4E03AQF-pGhCwv_e0g/profile-displayphoto-shrink_200_200/0/1664565500017?e=1675900800&v=beta&t=trGa7kI9h92yvK7ANYOhuwZScokGUXHBrcs3DGfvpOs" alt="Profile Picture" />
+                    </div> */}
+                    <div className="absolute bottom-0 avatar">
+                        <div className="w-full rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                            <img src="https://media.licdn.com/dms/image/D4E03AQF-pGhCwv_e0g/profile-displayphoto-shrink_200_200/0/1664565500017?e=1675900800&v=beta&t=trGa7kI9h92yvK7ANYOhuwZScokGUXHBrcs3DGfvpOs" />
+                        </div>
+                    </div>
+                </section>
+
+                <section className="flex flex-col items-center py-5">
+                    <div>
+                        <div className="flex flex-col items-center">
+                            <p className="font-Abhaya-Libre text-3xl text-white font-semibold">Natty Engeda</p>
+                            <p className="text-white text-lg">Website Designer</p>
+                            <p className="text-white text-xl">Versavvy Media Plc.</p>
+                        </div>
+                    </div>
+
+                </section>
+
             </main>
         </>
     );

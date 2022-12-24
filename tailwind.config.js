@@ -5,7 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'Abhaya-Libre':['Abhaya Libre', 'serif']
+      }
+    },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }

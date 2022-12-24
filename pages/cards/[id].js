@@ -15,10 +15,10 @@ const Cards = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="flex flex-col w-full bg-slate-700 min-h-screen">
-                <section className="relative flex flex-col items-center w-full h-[50vh] boor">
+                <section className="relative flex flex-col items-center w-full h-[45vh] boor">
                     <div className="w-full">
                         <img
-                            className="w-auto h-[40vh] object-fill bg-center"
+                            className="w-auto h-[35vh] object-fill bg-center"
                             src="https://images2.content-hci.com/commimg/myhotcourses/blog/post/myhc_89683.jpg" alt="Background Image" />
                     </div>
                     {/* <div className="absolute bottom-0 bg-gray-300 p-2 rounded-full">
@@ -35,10 +35,16 @@ const Cards = () => {
 
                 <section className="flex flex-col items-center py-5">
                     <div>
-                        <div className="flex flex-col items-center">
+                        <div className="flex flex-col items-center gap-2">
                             <p className="font-Abhaya-Libre text-3xl text-white font-semibold">Natty Engeda</p>
-                            <p className="text-white text-lg">Website Designer</p>
-                            <p className="text-white text-xl">Versavvy Media Plc.</p>
+                            <p className="text-white text-xl font-Glory">Website Designer</p>
+                            <p className="text-white text-xl font-sans">Versavvy Media Plc.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            
                         </div>
                     </div>
 

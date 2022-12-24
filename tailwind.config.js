@@ -6,8 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily:{
-        'Abhaya-Libre':['Abhaya Libre', 'serif']
+      fontFamily: {
+        'Abhaya-Libre': ['Abhaya Libre', 'serif'],
+        'Glory': ['Glory', 'sans-serif']
       }
     },
   },

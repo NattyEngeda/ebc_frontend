@@ -25,7 +25,7 @@ const Cards = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className="flex flex-col w-full bg-slate-700 min-h-screen">
+            <main className="flex flex-col w-full bg-slate-700 min-h-screen lg:w-[360px] lg:mx-auto">
                 <section className="relative flex flex-col items-center w-full h-[45vh] py-2 px-1">
                     <div className="card overflow-hidden">
                         <img
@@ -75,7 +75,7 @@ const Cards = () => {
                             <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
                                 <AiOutlineMail className="w-8 h-8" />
                                 <a
-                                    href="malito:nattynengeda@gmail.com"
+                                    href="mailto:nattynengeda@gmail.com"
                                     className="text-lg"
                                 >nattynengeda@gmail.com</a>
                             </div>

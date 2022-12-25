@@ -64,49 +64,58 @@ const Cards = () => {
 
                 </section>
 
-                <section className="flex flex-col gap-5 w-full bg-white px-5 min-h-screen py-5 ">
-                    <div className="grid grid-cols2 w-full gap-3">
-                        <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
-                            <AiOutlineMail className="w-8 h-8" />
-                            <a
-                                href="malito:nattynengeda@gmail.com"
-                                className="text-lg"
-                            >nattynengeda@gmail.com</a>
-                        </div>
+                <section className="flex flex-col gap-8 w-full bg-white px-5 min-h-screen py-5 ">
+                    <section className="flex flex-col gap-5 w-full">
+                        <div className="grid grid-cols2 w-full gap-3">
+                            <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
+                                <AiOutlineMail className="w-8 h-8" />
+                                <a
+                                    href="malito:nattynengeda@gmail.com"
+                                    className="text-lg"
+                                >nattynengeda@gmail.com</a>
+                            </div>
 
-                        <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
-                            <BsGlobe className="w-8 h-8" />
-                            <a
-                                href="malito:nattynengeda@gmail.com"
-                                className="text-lg"
-                            >https://nattyengeda.github.io</a>
-                        </div>
+                            <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
+                                <BsGlobe className="w-8 h-8" />
+                                <a
+                                    href="malito:nattynengeda@gmail.com"
+                                    className="text-lg"
+                                >https://nattyengeda.github.io</a>
+                            </div>
 
-                        <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
-                            <MdLocationOn className="w-8 h-8" />
-                            <a
-                                href="malito:nattynengeda@gmail.com"
-                                className="text-lg"
-                            >Addis Ababa, Kenenisa Ave</a>
-                        </div>
+                            <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
+                                <MdLocationOn className="w-8 h-8" />
+                                <a
+                                    href="malito:nattynengeda@gmail.com"
+                                    className="text-lg"
+                                >Addis Ababa, Kenenisa Ave</a>
+                            </div>
 
-                        <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
-                            <FaPhoneAlt className="w-8 h-8" />
-                            <a
-                                href="malito:nattynengeda@gmail.com"
-                                className="text-lg"
-                            >+251978538526</a>
-                        </div>
+                            <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
+                                <FaPhoneAlt className="w-8 h-8" />
+                                <a
+                                    href="malito:nattynengeda@gmail.com"
+                                    className="text-lg"
+                                >+251978538526</a>
+                            </div>
 
-                    </div>
+                        </div>
+                    </section>
+
+                    <hr className="text-black bg-black border border-black rounded-full w-5/6 mx-auto"/>
+
+                    <section className="flex flex-col gap-5">
+                        <div>
+                            <div>
+                                <p>Shop</p>
+                                <hr className="text-black bg-black border border-black rounded-full w-1/3"/>
+                            </div>
+                        </div>
+                    </section>
+
                 </section>
 
-                <section className="flex flex-col gap-5">
-                    <hr />
-                    <div>
-        
-                    </div>
-                </section>
+
 
             </main>
         </>

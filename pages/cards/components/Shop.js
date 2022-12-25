@@ -2,6 +2,8 @@ import Image from "next/image";
 
 // Images
 import img1 from '../../assets/images/shop1.png'
+import img2 from '../../assets/images/shop2.png'
+import img3 from '../../assets/images/shop3.png'
 
 const Shop = () => {
 
@@ -20,16 +22,16 @@ const Shop = () => {
             {/* Bottom Section */}
             <div className="flex flex-col gap-5">
                 <div className="grid grid-cols-2 gap-5">
-                    {/* <Image
+                    <Image
                         loader={myLoader}
                         src={img1}
                         alt="Picture of the author"
                         width={500}
                         height={500}
-                    /> */}
+                    />
                     <Image
                         loader={myLoader}
-                        src="https://a.cdn-hotels.com/gdcs/production159/d1884/32da0d4a-4124-4fce-a82b-0b5df674e9be.jpg?impolicy=fcrop&w=800&h=533&q=medium"
+                        src={img2}
                         alt="Picture of the author"
                         width={500}
                         height={500}
@@ -38,7 +40,7 @@ const Shop = () => {
                 <div>
                     <Image
                         loader={myLoader}
-                        src="https://a.cdn-hotels.com/gdcs/production159/d1884/32da0d4a-4124-4fce-a82b-0b5df674e9be.jpg?impolicy=fcrop&w=800&h=533&q=medium"
+                        src={img3}
                         alt="Picture of the author"
                         width={500}
                         height={500}

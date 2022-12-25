@@ -1,5 +1,10 @@
 import Image from "next/image";
 
+// Images
+import img1 from '../../assets/images/shop2.png';
+import img2 from '../../assets/images/work1.png';
+import img3 from '../../assets/images/work2.png';
+
 const Project = () => {
     const myLoader = ({ src, width, quality }) => {
         return `${src}?w=${width}&q=${quality || 75}`
@@ -16,14 +21,14 @@ const Project = () => {
                 <div className="grid grid-cols-2 gap-5">
                     <Image
                         loader={myLoader}
-                        src="https://a.cdn-hotels.com/gdcs/production159/d1884/32da0d4a-4124-4fce-a82b-0b5df674e9be.jpg?impolicy=fcrop&w=800&h=533&q=medium"
+                        src={img1}
                         alt="Picture of the author"
                         width={500}
                         height={500}
                     />
                     <Image
                         loader={myLoader}
-                        src="https://a.cdn-hotels.com/gdcs/production159/d1884/32da0d4a-4124-4fce-a82b-0b5df674e9be.jpg?impolicy=fcrop&w=800&h=533&q=medium"
+                        src={img2}
                         alt="Picture of the author"
                         width={500}
                         height={500}
@@ -32,7 +37,7 @@ const Project = () => {
                 <div>
                     <Image
                         loader={myLoader}
-                        src="https://a.cdn-hotels.com/gdcs/production159/d1884/32da0d4a-4124-4fce-a82b-0b5df674e9be.jpg?impolicy=fcrop&w=800&h=533&q=medium"
+                        src={img3}
                         alt="Picture of the author"
                         width={500}
                         height={500}

@@ -65,7 +65,7 @@ const Cards = () => {
                 </section>
 
                 <section className="flex flex-col gap-5 w-full bg-white px-5 min-h-screen py-5 ">
-                    <div className="grid grid-cols-1 w-full gap-3">
+                    <div className="grid grid-cols2 w-full gap-3">
                         <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
                             <AiOutlineMail className="w-8 h-8" />
                             <a
@@ -98,6 +98,13 @@ const Cards = () => {
                             >+251978538526</a>
                         </div>
 
+                    </div>
+                </section>
+
+                <section className="flex flex-col gap-5">
+                    <hr />
+                    <div>
+        
                     </div>
                 </section>
 

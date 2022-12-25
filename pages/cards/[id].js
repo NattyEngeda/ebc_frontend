@@ -2,6 +2,12 @@ import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
+// Icons
+import { BsFacebook, BsTelegram, BsInstagram, BsWhatsapp, BsGlobe } from 'react-icons/bs';
+import { AiOutlineMail } from 'react-icons/ai';
+import { MdLocationOn } from 'react-icons/md';
+import { FaPhoneAlt } from 'react-icons/fa';
+
 const Cards = () => {
     const router = useRouter();
     const { id } = router.query;
@@ -15,17 +21,12 @@ const Cards = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="flex flex-col w-full bg-slate-700 min-h-screen">
-                <section className="relative flex flex-col items-center w-full h-[45vh] boor">
-                    <div className="w-full">
+                <section className="relative flex flex-col items-center w-full h-[45vh] py-2 px-1">
+                    <div className="card overflow-hidden">
                         <img
                             className="w-auto h-[35vh] object-fill bg-center"
                             src="https://images2.content-hci.com/commimg/myhotcourses/blog/post/myhc_89683.jpg" alt="Background Image" />
                     </div>
-                    {/* <div className="absolute bottom-0 bg-gray-300 p-2 rounded-full">
-                        <img
-                            className="rounded-full"
-                            src="https://media.licdn.com/dms/image/D4E03AQF-pGhCwv_e0g/profile-displayphoto-shrink_200_200/0/1664565500017?e=1675900800&v=beta&t=trGa7kI9h92yvK7ANYOhuwZScokGUXHBrcs3DGfvpOs" alt="Profile Picture" />
-                    </div> */}
                     <div className="absolute bottom-0 avatar">
                         <div className="w-full rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                             <img src="https://media.licdn.com/dms/image/D4E03AQF-pGhCwv_e0g/profile-displayphoto-shrink_200_200/0/1664565500017?e=1675900800&v=beta&t=trGa7kI9h92yvK7ANYOhuwZScokGUXHBrcs3DGfvpOs" />
@@ -42,12 +43,62 @@ const Cards = () => {
                         </div>
                     </div>
 
-                    <div>
-                        <div>
-                            
+                    <div className="flex flex-row px-5 gap-3 py-10">
+                        <div className="socialiconcontainer bg-blue-700">
+                            <BsFacebook className="socialicons " />
+                        </div>
+                        <div className="socialiconcontainer bg-blue-800">
+                            <BsTelegram className="socialicons" />
+                        </div>
+                        <div className="socialiconcontainer bg-pink-700">
+                            <BsInstagram className="socialicons" />
+                        </div>
+                        <div className="socialiconcontainer bg-green-500">
+                            <BsWhatsapp className="socialicons" />
                         </div>
                     </div>
 
+                    <div className="w-full px-5">
+                        <hr className="white" />
+                    </div>
+
+                </section>
+
+                <section className="flex flex-col gap-5 w-full bg-white px-5 min-h-screen py-5 ">
+                    <div className="grid grid-cols-1 w-full gap-3">
+                        <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
+                            <AiOutlineMail className="w-8 h-8" />
+                            <a
+                                href="malito:nattynengeda@gmail.com"
+                                className="text-lg"
+                            >nattynengeda@gmail.com</a>
+                        </div>
+
+                        <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
+                            <BsGlobe className="w-8 h-8" />
+                            <a
+                                href="malito:nattynengeda@gmail.com"
+                                className="text-lg"
+                            >https://nattyengeda.github.io</a>
+                        </div>
+
+                        <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
+                            <MdLocationOn className="w-8 h-8" />
+                            <a
+                                href="malito:nattynengeda@gmail.com"
+                                className="text-lg"
+                            >Addis Ababa, Kenenisa Ave</a>
+                        </div>
+
+                        <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
+                            <FaPhoneAlt className="w-8 h-8" />
+                            <a
+                                href="malito:nattynengeda@gmail.com"
+                                className="text-lg"
+                            >+251978538526</a>
+                        </div>
+
+                    </div>
                 </section>
 
             </main>

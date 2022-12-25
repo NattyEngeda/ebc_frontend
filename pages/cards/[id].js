@@ -3,19 +3,20 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 
-// Icons
-import { BsFacebook, BsTelegram, BsInstagram, BsWhatsapp, BsGlobe } from 'react-icons/bs';
-import { AiOutlineMail } from 'react-icons/ai';
-import { MdLocationOn } from 'react-icons/md';
-import { FaPhoneAlt } from 'react-icons/fa';
+
+import ProfileImage from "./components/ProfileImage";
+import PersonalInfo from "./components/PersonalInfo";
+import Social from "./components/Social";
+import Contact from "./components/Contact";
+import Shop from "./components/Shop";
+import Work from "./components/Work";
+import Footer from "./components/Footer";
+import Project from "./components/Project";
+import Message from "./components/Message";
 
 const Cards = () => {
     const router = useRouter();
-    const { id } = router.query;
-
-    const myLoader = ({ src, width, quality }) => {
-        return `${src}?w=${width}&q=${quality || 75}`
-    }
+    const { id } = router.query;  
 
     return (
         <>
@@ -26,42 +27,11 @@ const Cards = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="flex flex-col w-full bg-slate-700 min-h-screen lg:w-[360px] lg:mx-auto">
-                <section className="relative flex flex-col items-center w-full h-[45vh] py-2 px-1">
-                    <div className="card overflow-hidden">
-                        <img
-                            className="w-auto h-[35vh] object-fill bg-center"
-                            src="https://images2.content-hci.com/commimg/myhotcourses/blog/post/myhc_89683.jpg" alt="Background Image" />
-                    </div>
-                    <div className="absolute bottom-0 avatar">
-                        <div className="w-full rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                            <img src="https://media.licdn.com/dms/image/D4E03AQF-pGhCwv_e0g/profile-displayphoto-shrink_200_200/0/1664565500017?e=1675900800&v=beta&t=trGa7kI9h92yvK7ANYOhuwZScokGUXHBrcs3DGfvpOs" />
-                        </div>
-                    </div>
-                </section>
+                <ProfileImage />
 
                 <section className="flex flex-col items-center py-5">
-                    <div>
-                        <div className="flex flex-col items-center gap-2">
-                            <p className="font-Abhaya-Libre text-3xl text-white font-semibold">Natty Engeda</p>
-                            <p className="text-white text-xl font-Glory">Website Designer</p>
-                            <p className="text-white text-xl font-sans">Versavvy Media Plc.</p>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-row px-5 gap-3 py-10">
-                        <div className="socialiconcontainer bg-blue-700">
-                            <BsFacebook className="socialicons " />
-                        </div>
-                        <div className="socialiconcontainer bg-blue-800">
-                            <BsTelegram className="socialicons" />
-                        </div>
-                        <div className="socialiconcontainer bg-pink-700">
-                            <BsInstagram className="socialicons" />
-                        </div>
-                        <div className="socialiconcontainer bg-green-500">
-                            <BsWhatsapp className="socialicons" />
-                        </div>
-                    </div>
+                    <PersonalInfo />
+                    <Social />
 
                     <div className="w-full px-5">
                         <hr className="white" />
@@ -70,127 +40,27 @@ const Cards = () => {
                 </section>
 
                 <section className="flex flex-col gap-8 w-full bg-white px-5 min-h-screen py-5 ">
-                    <section className="flex flex-col gap-5 w-full">
-                        <div className="grid grid-cols2 w-full gap-3">
-                            <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
-                                <AiOutlineMail className="w-8 h-8" />
-                                <a
-                                    href="mailto:nattynengeda@gmail.com"
-                                    className="text-lg"
-                                >nattynengeda@gmail.com</a>
-                            </div>
-
-                            <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
-                                <BsGlobe className="w-8 h-8" />
-                                <a
-                                    href="malito:nattynengeda@gmail.com"
-                                    className="text-lg"
-                                >https://nattyengeda.github.io</a>
-                            </div>
-
-                            <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
-                                <MdLocationOn className="w-8 h-8" />
-                                <a
-                                    href="malito:nattynengeda@gmail.com"
-                                    className="text-lg"
-                                >Addis Ababa, Kenenisa Ave</a>
-                            </div>
-
-                            <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
-                                <FaPhoneAlt className="w-8 h-8" />
-                                <a
-                                    href="malito:nattynengeda@gmail.com"
-                                    className="text-lg"
-                                >+251978538526</a>
-                            </div>
-
-                        </div>
-                    </section>
+                    <Contact />
 
                     <hr className="text-black bg-black border border-black rounded-full w-5/6 mx-auto" />
 
                     <section className="flex flex-col gap-5">
                         {/* Shops */}
-                        <div className="flex flex-col gap-10">
-                            {/* Top Section */}
-                            <div className="flex flex-col gap-2">
-                                <p className="text-3xl font-Sanchez">Shop</p>
-                                <hr className="text-black bg-black border border-black rounded-full w-1/3" />
-                            </div>
-                            {/* Bottom Section */}
-                            <div className="flex flex-col gap-5">
-                                <div className="grid grid-cols-2 gap-5">
-                                    <Image
-                                        loader={myLoader}
-                                        src="https://a.cdn-hotels.com/gdcs/production159/d1884/32da0d4a-4124-4fce-a82b-0b5df674e9be.jpg?impolicy=fcrop&w=800&h=533&q=medium"
-                                        alt="Picture of the author"
-                                        width={500}
-                                        height={500}
-                                    />
-                                     <Image
-                                        loader={myLoader}
-                                        src="https://a.cdn-hotels.com/gdcs/production159/d1884/32da0d4a-4124-4fce-a82b-0b5df674e9be.jpg?impolicy=fcrop&w=800&h=533&q=medium"
-                                        alt="Picture of the author"
-                                        width={500}
-                                        height={500}
-                                    />
-                                </div>
-                                <div>
-                                <Image
-                                        loader={myLoader}
-                                        src="https://a.cdn-hotels.com/gdcs/production159/d1884/32da0d4a-4124-4fce-a82b-0b5df674e9be.jpg?impolicy=fcrop&w=800&h=533&q=medium"
-                                        alt="Picture of the author"
-                                        width={500}
-                                        height={500}
-                                    />
-                                </div>
-                            </div>
-                        </div>
+                        <Shop />
 
-                         {/* Work */}
-                         <div className="flex flex-col gap-10">
-                            {/* Top Section */}
-                            <div className="flex flex-col gap-2">
-                                <p className="text-3xl font-Sanchez">Work</p>
-                                <hr className="text-black bg-black border border-black rounded-full w-1/3" />
-                            </div>
-                            {/* Bottom Section */}
-                            <div className="flex flex-col gap-5">
-                                <div className="grid grid-cols-2 gap-5">
-                                    <Image
-                                        loader={myLoader}
-                                        src="https://a.cdn-hotels.com/gdcs/production159/d1884/32da0d4a-4124-4fce-a82b-0b5df674e9be.jpg?impolicy=fcrop&w=800&h=533&q=medium"
-                                        alt="Picture of the author"
-                                        width={500}
-                                        height={500}
-                                    />
-                                     <Image
-                                        loader={myLoader}
-                                        src="https://a.cdn-hotels.com/gdcs/production159/d1884/32da0d4a-4124-4fce-a82b-0b5df674e9be.jpg?impolicy=fcrop&w=800&h=533&q=medium"
-                                        alt="Picture of the author"
-                                        width={500}
-                                        height={500}
-                                    />
-                                </div>
-                                <div>
-                                <Image
-                                        loader={myLoader}
-                                        src="https://a.cdn-hotels.com/gdcs/production159/d1884/32da0d4a-4124-4fce-a82b-0b5df674e9be.jpg?impolicy=fcrop&w=800&h=533&q=medium"
-                                        alt="Picture of the author"
-                                        width={500}
-                                        height={500}
-                                    />
-                                </div>
-                            </div>
-                        </div>
+                        {/* Work */}
+                        <Work/>
+
+                        {/* Project */}
+                        <Project/>
+
+                        {/* Message */}
+                        <Message/>
+                        
                     </section>
                 </section>
 
-                <section className="h-10 bg-[#192C45] px-5">
-                    <div className="w-full h-full flex flex-row items-center justify-end ">
-                        <p className="text-white font-Sanchez font-light text-sm">Copyright 2022, EBC</p>
-                    </div>
-                </section>
+              <Footer/>
             </main>
         </>
     );

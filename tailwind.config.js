@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'Abhaya-Libre': ['Abhaya Libre', 'serif'],
-        'Glory': ['Glory', 'sans-serif']
+        'Glory': ['Glory', 'sans-serif'],
+        'Sanchez': ['Sanchez', 'serif']
       }
     },
   },

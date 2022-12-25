@@ -105,9 +105,10 @@ const Cards = () => {
                     <hr className="text-black bg-black border border-black rounded-full w-5/6 mx-auto"/>
 
                     <section className="flex flex-col gap-5">
+                        {/*  */}
                         <div>
-                            <div>
-                                <p>Shop</p>
+                            <div className="flex flex-col gap-2">
+                                <p className="text-3xl font-Sanchez">Shop</p>
                                 <hr className="text-black bg-black border border-black rounded-full w-1/3"/>
                             </div>
                         </div>

@@ -22,12 +22,41 @@ const Index = () => {
     const loginSubmit = (values) => {
         axios.post('/login', values, {
             withCredentials: true,
-        }).then((response)=>{
-            
+        }).then((response) => {
+
         })
 
     }
     const loginError = (errors) => {
+        console.log(errors);
+    }
+
+    const signupForm = useForm({
+        initialValues: {
+            fname: '',
+            lname: '',
+            uname: '',
+            email: '',
+            password: '',
+        },
+        validate: {
+            fname: (value) => (value.length < 2 ? 'Add more Letter' : null),
+            lname: (value) => (value.length < 2 ? 'Add more Letter' : null),
+            uname: (value) => (value.length < 2 ? 'Add more Letter' : null),
+            email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+            password: (value) => (value.length < 8 ? 'Passowrd Must be greater that 8 ' : null),
+        }
+    })
+
+    const signupSubmit = (values) => {
+        axios.post('/signup', values, {
+            withCredentials: true,
+        }).then((response) => {
+            console.log(response.data);
+        })
+
+    }
+    const signupError = (errors) => {
         console.log(errors);
     }
 
@@ -80,25 +109,36 @@ const Index = () => {
                     }
                     {
                         authState == "signup" &&
-                        <form className='flex flex-col gap-5 px-5 md:px-10 py-5'>
+                        <form
+                            onSubmit={signupForm.onSubmit(signupSubmit, signupError)}
+                            className='flex flex-col gap-5 px-5 md:px-10 py-5'>
                             <div className='grid grid-cols-2 gap-5'>
                                 <TextInput
                                     label="First Name"
+                                    {...signupForm.getInputProps('fname')}
                                 />
                                 <TextInput
                                     label="Last Name"
+                                    {...signupForm.getInputProps('lname')}
+
                                 />
                             </div>
                             <TextInput
                                 label="Username"
+                                {...signupForm.getInputProps('uname')}
+
                             />
                             <TextInput
                                 label="Email"
+                                {...signupForm.getInputProps('email')}
+
                             />
                             <PasswordInput
                                 label="Funn Name"
+                                {...signupForm.getInputProps('password')}
+
                             />
-                            <button className='btn'>Signup</button>
+                            <button type='submit' className='btn'>Signup</button>
                         </form>
                     }
 

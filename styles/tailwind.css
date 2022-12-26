@@ -17,6 +17,6 @@
         @apply  rounded-full p-2;
     }
     .socialicons{
-        @apply w-10 h-10 text-white;
+        @apply w-8 h-8 text-white;
     }
 }

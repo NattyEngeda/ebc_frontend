@@ -4,7 +4,7 @@ import axios from "axios";
 // console.log(env.URL);
 
 const instance = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_URL,
+    baseURL: 'http://localhost:8000',
 })
 
 export default instance;

@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start-server": "NODE_ENV=production node server.js",
+    "build-static": "next build && next export"
   },
   "dependencies": {
     "@mantine/core": "^5.9.5",

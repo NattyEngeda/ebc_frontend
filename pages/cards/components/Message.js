@@ -3,7 +3,7 @@ import { Accordion, TextInput, Textarea } from '@mantine/core';
 const Message = () => {
     return (
         <div className='boorshad'>
-            <Accordion defaultValue="contact">
+            <Accordion>
                 <Accordion.Item value="contact">
                     <Accordion.Control>Contact Me !!</Accordion.Control>
                     <Accordion.Panel>

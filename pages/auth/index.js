@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from '../components/header';
 import { TextInput, PasswordInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
-import axios from '../http/axios';
+// import axios from '../http/axios';
 
 
 const Index = () => {
@@ -20,11 +20,11 @@ const Index = () => {
     });
 
     const loginSubmit = (values) => {
-        axios.post('/login', values, {
-            withCredentials: true,
-        }).then((response) => {
+        // axios.post('/login', values, {
+        //     withCredentials: true,
+        // }).then((response) => {
 
-        })
+        // })
 
     }
     const loginError = (errors) => {

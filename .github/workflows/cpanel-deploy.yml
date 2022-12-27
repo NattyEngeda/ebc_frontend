@@ -1,8 +1,5 @@
 name: 🚀 Publish Website to CPanel
-on:
-  push:
-    branches:
-      - master
+on: [push]
 jobs:
   FTP-Deploy-Action:
     name: 🎉 Deploy

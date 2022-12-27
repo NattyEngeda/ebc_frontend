@@ -29,11 +29,11 @@ jobs:
           git reset --
       - name: Build Project
         run: npm run build
-
+        
       - name: 📂 Sync folders and files to the server
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ftp.fitsumpp.com
-          local-dir: ./next/
+          local-dir: /next/
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}

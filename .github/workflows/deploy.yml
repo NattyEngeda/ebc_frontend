@@ -10,9 +10,8 @@ jobs:
     - name: Build app
       run: npm run build
     - name: Deploy to cPanel
-      uses: cpanel/deploy-cpanel@v1
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        host: fitsumpp.com
-        user: fitsumppcom
-        password: ${{ secrets.CPANEL_PASSWORD }}
-        public_html_path: /home/fitsumppcom/test.fitsumpp.com
+         server: ${{ secrets.FTP_SERVER }}
+         username: ${{ secrets.FTP_USERNAME }}
+         password: ${{ secrets.FTP_PASSWORD }}

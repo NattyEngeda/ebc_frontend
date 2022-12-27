@@ -1,0 +1,10 @@
+{
+    "theme_color": "#1fd4c0",
+    "backgrond_color": "#259409",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "EBC",
+    "short_name": "ebc",
+    "description": "Electronic Business Card"
+}

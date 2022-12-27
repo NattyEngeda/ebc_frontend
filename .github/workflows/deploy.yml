@@ -10,7 +10,7 @@ jobs:
     - name: Build app
       run: npm run build
     - name: Deploy to cPanel
-      uses: ilovejs/cpanel-deploy-action@v1
+      uses: cpanel/deploy-cpanel@v1
       with:
         host: fitsumpp.com
         user: fitsumppcom

@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import Header from '../components/header';
 import { TextInput, PasswordInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
-// import axios from '../http/axios';
+import axios from '../components/axios';
+
+// Notifications
 
 
 const Index = () => {
     const [authState, setAuthState] = useState('start');
+    
 
     const loginForm = useForm({
         initialValues: {
@@ -20,11 +23,12 @@ const Index = () => {
     });
 
     const loginSubmit = (values) => {
-        // axios.post('/login', values, {
-        //     withCredentials: true,
-        // }).then((response) => {
-
-        // })
+        axios.post('/login', values, {
+            withCredentials: true,
+        }).then((response) => {
+            console.log(response.data);
+            notify('Hello')
+        })
 
     }
     const loginError = (errors) => {
@@ -69,7 +73,8 @@ const Index = () => {
                     <div
                         className="text-center flex flex-col items-center gap-2 cursor-pointer"
                         onClick={() => {
-                            setAuthState('start')
+                            setAuthState('start');
+
                         }}
                     >
                         <h1 className="text-3xl font-Sanchez">Login or Signup</h1>
@@ -79,7 +84,7 @@ const Index = () => {
                         <div className="flex flex-col gap-5 px-5 md:px-10 py-5">
                             <button
                                 onClick={() => {
-                                    setAuthState('login')
+                                    setAuthState('login');
                                 }}
                                 className='btn'>Login</button>
                             <button
@@ -141,7 +146,7 @@ const Index = () => {
                             <button type='submit' className='btn'>Signup</button>
                         </form>
                     }
-
+                           
                 </div>
             </main>
         </>

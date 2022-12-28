@@ -10,7 +10,6 @@ const Alert = (message) => {
     }
     return (
         <>
-            
             <ToastContainer />
         </>
     );

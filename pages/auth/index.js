@@ -5,7 +5,7 @@ import { useForm } from '@mantine/form';
 import axios from '../components/axios';
 
 // Notifications
-
+import Alert from '../components/alert';
 
 const Index = () => {
     const [authState, setAuthState] = useState('start');
@@ -85,11 +85,13 @@ const Index = () => {
                             <button
                                 onClick={() => {
                                     setAuthState('login');
+
                                 }}
                                 className='btn'>Login</button>
                             <button
                                 onClick={() => {
                                     setAuthState('signup')
+                                    <Alert/>
                                 }}
                                 className='btn'>Signup</button>
                         </div>

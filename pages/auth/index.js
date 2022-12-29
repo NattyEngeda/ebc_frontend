@@ -5,11 +5,27 @@ import { useForm } from '@mantine/form';
 import axios from '../components/axios';
 
 // Notifications
-import Alert from '../components/alert';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Index = () => {
     const [authState, setAuthState] = useState('start');
-    
+    const notify = (message, status) => {
+        if(status == 'success'){
+            toast.success(message,{
+                theme: 'light'
+            });
+        }else if(status == 'error'){
+            toast.error(message,{
+                theme: 'colored'
+            });
+        }else if(status == 'warning'){
+            toast.warning(message, {
+                theme: 'colored'
+            });
+        }
+    };
+
 
     const loginForm = useForm({
         initialValues: {
@@ -57,6 +73,15 @@ const Index = () => {
             withCredentials: true,
         }).then((response) => {
             console.log(response.data);
+            if (response.data.msg == 'email_exists') {
+                notify('Email Exists', 'warning');
+            } else if (response.data.msg == 'success') {
+                notify('Account Created successfully', 'success');
+                signupForm.reset();
+            }
+        }).catch((error) => {
+            console.log(error);
+            notify('Error', 'error');
         })
 
     }
@@ -91,7 +116,6 @@ const Index = () => {
                             <button
                                 onClick={() => {
                                     setAuthState('signup')
-                                    <Alert/>
                                 }}
                                 className='btn'>Signup</button>
                         </div>
@@ -141,14 +165,13 @@ const Index = () => {
 
                             />
                             <PasswordInput
-                                label="Funn Name"
+                                label="Password"
                                 {...signupForm.getInputProps('password')}
-
                             />
                             <button type='submit' className='btn'>Signup</button>
                         </form>
                     }
-                           
+                    <ToastContainer />
                 </div>
             </main>
         </>

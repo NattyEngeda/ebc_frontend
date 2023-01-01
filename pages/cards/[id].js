@@ -44,7 +44,7 @@ const Cards = () => {
 
                     <hr className="text-black bg-black border border-black rounded-full w-5/6 mx-auto" />
 
-                    <section className="flex flex-col gap-5">
+                    <section className="flex flex-col gap-4">
                         {/* Shops */}
                         <Shop />
 

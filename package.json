@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "start-server": "NODE_ENV=production node server.js",
+    "start-server": "node server.js",
     "build-static": "next build && next export"
   },
   "dependencies": {

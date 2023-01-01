@@ -6,10 +6,28 @@
 
 // // Notifications
 // import Alert from '../components/alert';
+// Notifications
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-// const Index = () => {
-//     const [authState, setAuthState] = useState('start');
-    
+const Index = () => {
+    const [authState, setAuthState] = useState('start');
+    const notify = (message, status) => {
+        if(status == 'success'){
+            toast.success(message,{
+                theme: 'light'
+            });
+        }else if(status == 'error'){
+            toast.error(message,{
+                theme: 'colored'
+            });
+        }else if(status == 'warning'){
+            toast.warning(message, {
+                theme: 'colored'
+            });
+        }
+    };
+
 
 //     const loginForm = useForm({
 //         initialValues: {
@@ -52,12 +70,21 @@
 //         }
 //     })
 
-//     const signupSubmit = (values) => {
-//         axios.post('/signup', values, {
-//             withCredentials: true,
-//         }).then((response) => {
-//             console.log(response.data);
-//         })
+    const signupSubmit = (values) => {
+        axios.post('/signup', values, {
+            withCredentials: true,
+        }).then((response) => {
+            console.log(response.data);
+            if (response.data.msg == 'email_exists') {
+                notify('Email Exists', 'warning');
+            } else if (response.data.msg == 'success') {
+                notify('Account Created successfully', 'success');
+                signupForm.reset();
+            }
+        }).catch((error) => {
+            console.log(error);
+            notify('Error', 'error');
+        })
 
 //     }
 //     const signupError = (errors) => {
@@ -86,47 +113,46 @@
 //                                 onClick={() => {
 //                                     setAuthState('login');
 
-//                                 }}
-//                                 className='btn'>Login</button>
-//                             <button
-//                                 onClick={() => {
-//                                     setAuthState('signup')
-//                                     <Alert/>
-//                                 }}
-//                                 className='btn'>Signup</button>
-//                         </div>
-//                     }
-//                     {
-//                         authState == "login" &&
-//                         <div className=''>
-//                             <form
-//                                 onSubmit={loginForm.onSubmit(loginSubmit, loginError)}
-//                                 className='flex flex-col gap-5 px-5 md:px-10 py-5'>
-//                                 <TextInput
-//                                     label="Username"
-//                                     {...loginForm.getInputProps('username')}
-//                                 />
-//                                 <PasswordInput
-//                                     label="Password"
-//                                     {...loginForm.getInputProps('password')}
-//                                 />
-//                                 <button type='submit' className='btn'>Login</button>
-//                             </form>
-//                         </div>
-//                     }
-//                     {
-//                         authState == "signup" &&
-//                         <form
-//                             onSubmit={signupForm.onSubmit(signupSubmit, signupError)}
-//                             className='flex flex-col gap-5 px-5 md:px-10 py-5'>
-//                             <div className='grid grid-cols-2 gap-5'>
-//                                 <TextInput
-//                                     label="First Name"
-//                                     {...signupForm.getInputProps('fname')}
-//                                 />
-//                                 <TextInput
-//                                     label="Last Name"
-//                                     {...signupForm.getInputProps('lname')}
+                                }}
+                                className='btn'>Login</button>
+                            <button
+                                onClick={() => {
+                                    setAuthState('signup')
+                                }}
+                                className='btn'>Signup</button>
+                        </div>
+                    }
+                    {
+                        authState == "login" &&
+                        <div className=''>
+                            <form
+                                onSubmit={loginForm.onSubmit(loginSubmit, loginError)}
+                                className='flex flex-col gap-5 px-5 md:px-10 py-5'>
+                                <TextInput
+                                    label="Username"
+                                    {...loginForm.getInputProps('username')}
+                                />
+                                <PasswordInput
+                                    label="Password"
+                                    {...loginForm.getInputProps('password')}
+                                />
+                                <button type='submit' className='btn'>Login</button>
+                            </form>
+                        </div>
+                    }
+                    {
+                        authState == "signup" &&
+                        <form
+                            onSubmit={signupForm.onSubmit(signupSubmit, signupError)}
+                            className='flex flex-col gap-5 px-5 md:px-10 py-5'>
+                            <div className='grid grid-cols-2 gap-5'>
+                                <TextInput
+                                    label="First Name"
+                                    {...signupForm.getInputProps('fname')}
+                                />
+                                <TextInput
+                                    label="Last Name"
+                                    {...signupForm.getInputProps('lname')}
 
 //                                 />
 //                             </div>
@@ -139,30 +165,19 @@
 //                                 label="Email"
 //                                 {...signupForm.getInputProps('email')}
 
-//                             />
-//                             <PasswordInput
-//                                 label="Funn Name"
-//                                 {...signupForm.getInputProps('password')}
-
-//                             />
-//                             <button type='submit' className='btn'>Signup</button>
-//                         </form>
-//                     }
-                           
-//                 </div>
-//             </main>
-//         </>
-//     );
-// }
-
-// export default Index;
-
-const Login = () => {
-    return ( 
-        <div>
-            
-        </div>
-     );
+                            />
+                            <PasswordInput
+                                label="Password"
+                                {...signupForm.getInputProps('password')}
+                            />
+                            <button type='submit' className='btn'>Signup</button>
+                        </form>
+                    }
+                    <ToastContainer />
+                </div>
+            </main>
+        </>
+    );
 }
  
 export default Login;

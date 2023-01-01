@@ -180,4 +180,4 @@ const Index = () => {
     );
 }
  
-export default Login;
+export default Index;

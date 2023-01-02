@@ -14,7 +14,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
-
+      - name: Clean Cache On npm
+        run: npm cache clean --force
+        
       - name: Cache npm dependencies
         uses: actions/cache@v2
         id: cache-node-modules

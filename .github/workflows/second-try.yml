@@ -35,5 +35,5 @@ jobs:
         with:
           server: ${{ secrets.FTP_SERVER }}
           # local-dir: .next/
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          username: ${{ secrets.FTP_USERNAME_1 }}
+          password: ${{ secrets.FTP_PASSWORD_1 }}

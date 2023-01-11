@@ -21,6 +21,7 @@ const Contact = () => {
                     <a
                         href="https://nattyengeda.github.io"
                         target="_blank"
+                        rel='noreferrer'
                         className="text-lg"
                     >https://nattyengeda.github.io</a>
                 </div>

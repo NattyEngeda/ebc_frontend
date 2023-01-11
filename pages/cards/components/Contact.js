@@ -19,7 +19,8 @@ const Contact = () => {
                 <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
                     <BsGlobe className="w-8 h-8" />
                     <a
-                        href="malito:nattynengeda@gmail.com"
+                        href="https://nattyengeda.github.io"
+                        target="_blank"
                         className="text-lg"
                     >https://nattyengeda.github.io</a>
                 </div>
@@ -35,7 +36,7 @@ const Contact = () => {
                 <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
                     <FaPhoneAlt className="w-8 h-8" />
                     <a
-                        href="malito:nattynengeda@gmail.com"
+                        href="tel:+251978538526"
                         className="text-lg"
                     >+251978538526</a>
                 </div>

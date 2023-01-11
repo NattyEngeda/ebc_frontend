@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 // Images
-import img1 from '../../assets/images/shop1.png'
-import img2 from '../../assets/images/shop2.png'
-import img3 from '../../assets/images/shop3.png'
+import img1 from '../../../assets/images/shop1.png';
+import img2 from '../../../assets/images/shop2.png'
+import img3 from '../../../assets/images/shop3.png'
 
 const Shop = () => {
 

@@ -7,23 +7,23 @@ import { FaPhoneAlt } from 'react-icons/fa';
 const Contact = () => {
     return (
         <div className="flex flex-col gap-5 w-full">
-            <div className="grid grid-cols2 w-full gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-3">
                 <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
                     <AiOutlineMail className="w-8 h-8" />
                     <a
-                        href="mailto:nattynengeda@gmail.com"
+                        href="mailto:girmaatlabachew@gmail.com"
                         className="text-lg"
-                    >nattynengeda@gmail.com</a>
+                    >girmaatlabachew@gmail.com</a>
                 </div>
 
                 <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
                     <BsGlobe className="w-8 h-8" />
                     <a
-                        href="https://nattyengeda.github.io"
+                        href="#"
                         target="_blank"
                         rel='noreferrer'
                         className="text-lg"
-                    >https://nattyengeda.github.io</a>
+                    >21627</a>
                 </div>
 
                 <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
@@ -37,9 +37,9 @@ const Contact = () => {
                 <div className="rounded-lg boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
                     <FaPhoneAlt className="w-8 h-8" />
                     <a
-                        href="tel:+251978538526"
+                        href="tel:+251923149474"
                         className="text-lg"
-                    >+251978538526</a>
+                    >+251923149474</a>
                 </div>
 
             </div>

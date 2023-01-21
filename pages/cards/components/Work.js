@@ -17,7 +17,7 @@ const Work = () => {
                 <hr className="w-1/6 text-red-800 border-2 border-red-800" />
             </div>
             {/* Bottom Section */}
-            <div className="flex flex-col gap-5">
+            <div className="container flex flex-col gap-5">
                 {/* <h1>Swiper</h1> */}
                 <div className="grid grid-cols-2 gap-5">
                     <Image
@@ -40,7 +40,7 @@ const Work = () => {
                         loader={myLoader}
                         src={img3}
                         alt="Picture of the author"
-                        width={500}
+                        // width={500}
                         height={500}
                     />
                 </div>

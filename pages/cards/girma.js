@@ -136,7 +136,7 @@ const Yonas = () => {
 
                     <section className="flex flex-col gap-5 flex-wrap">
                         {/* Work */}
-                        <Work />
+                        {/* <Work /> */}
 
                         {/* Project */}
                         {/* <Project /> */}

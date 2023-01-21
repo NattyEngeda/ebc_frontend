@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
+import { Modal, TextInput, Textarea } from '@mantine/core';
 
 
 import ProfileImage from "./components/ProfileImage";
@@ -21,7 +22,7 @@ import image from '../../assets/images/placeholder/placeholder.png'
 const Yonas = () => {
     const router = useRouter();
     const skill = [1, 2, 3, 4, 5, 6];
-
+    const [modalOpened, setModalOpened] = useState(false);
 
     const myLoader = ({ src, width, quality }) => {
         return `${src}?w=${width}&q=${quality || 75}`
@@ -36,10 +37,10 @@ const Yonas = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className="flex flex-col w-full bg-slate-700 min-h-screen container mx-auto">
+            <main className="flex flex-col w-full bg-gradient-to-br from-slate-700 via-violet-500 to-purple-700  min-h-screen  mx-auto">
                 {/* <ProfileImage /> */}
 
-                <section className="flex flex-col items-start justify-center py-1 px-10 gap-10 min-h-screen">
+                <section className="contianer flex flex-col items-start justify-center py-1 px-10 gap-10 min-h-screen">
                     <div className="flex flex-col gap-10">
                         <div className="flex flex-col gap-2 md:gap-5">
                             <h1 className="text-3xl md:text-6xl text-white">Sanitary Systems and Elector Mechanical System Contractor</h1>
@@ -54,12 +55,12 @@ const Yonas = () => {
 
                 </section>
 
-                <section className="flex flex-col gap-8 w-full bg-white px-5 min-h-screen py-5 ">
+                <section className="flex flex-col gap-8 w-full bg-white px-5 md min-h-screen py-5">
                     <Contact />
 
                     <hr className="text-black bg-black border border-black rounded-full w-5/6 mx-auto" />
 
-                    <section className="flex flex-col gap-6">
+                    <section className="flex flex-col gap-10">
                         <div className="flex flex-col gap-3 items-center">
                             <h1 className="text-3xl md:text-5xl text-black">What I do</h1>
                             <hr className="w-1/6 text-red-800 border-2 border-red-800" />
@@ -67,7 +68,7 @@ const Yonas = () => {
                         <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 px-5 md:px-20">
                             {
                                 skill.map((items) => (
-                                    <div className="flex flex-col gap-4" key={items}>
+                                    <div className="flex flex-col gap-5 rounded-xl overflow-hidden" key={items}>
                                         <Image
                                             loader={myLoader}
                                             src={placeholder}
@@ -83,17 +84,29 @@ const Yonas = () => {
                         </div>
                     </section>
 
-                    <section className="flex flex-col gap-5">
-                    <div className="flex flex-col gap-3 items-center">
+                    <section className="flex flex-col gap-10">
+                        <div className="flex flex-col gap-3 items-center">
                             <h1 className="text-3xl md:text-5xl text-black">Clients</h1>
                             <hr className="w-1/6 text-red-800 border-2 border-red-800" />
                         </div>
+                        <div className="min-h-40vh grid grid-cols-2 md:grid-cols-3 gap-10 px-5 md:px-20">
+                            {
+                                skill.map((items) => (
+                                    <div className="flex flex-col gap-4 rounded-xl overflow-hidden" key={items}>
+                                        <Image
+                                            loader={myLoader}
+                                            src={placeholder}
+                                            alt="Placeholder"
+                                            width={500}
+                                            height={500}
+                                        />
+                                    </div>
+                                ))
+                            }
+                        </div>
                     </section>
 
-                    <section className="flex flex-col gap-4 flex-wrap">
-                        {/* Shops */}
-                        <Shop />
-
+                    <section className="flex flex-col gap-5 flex-wrap">
                         {/* Work */}
                         <Work />
 
@@ -101,9 +114,52 @@ const Yonas = () => {
                         <Project />
 
                         {/* Message */}
-                        <Message />
+                        {/* <Message /> */}
 
                     </section>
+
+                    <section className="flex flex-col gap-10">
+                        <div className="flex flex-col gap-3 items-center">
+                            <h1 className="text-3xl md:text-5xl text-black">Location</h1>
+                            <hr className="w-1/6 text-red-800 border-2 border-red-800" />
+                        </div>
+                        <div className="w-full gap-10 md:px-20">
+
+                            <iframe
+                                className="boorshad shadow-xl hover:shadow-2xl h-96 md:h-[40rem]"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1970.2607768682337!2d38.7866833!3d9.0160948!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85091bba7025%3A0xc4c052f755971a73!2sGolagul%20Building!5e0!3m2!1sen!2set!4v1674298227376!5m2!1sen!2set"
+                                width="100%"
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade">
+                            </iframe>
+
+                        </div>
+                    </section>
+                    <section className="flex flex-row items-center justify-center ">
+                        <button
+                            onClick={() => setModalOpened(true)}
+                            className="px-5 py-3 md:px-6 md:py-4 bg-slate-700 hover:bg-slate-800 hover:shadow-lg text-white rounded-lg">Lets Talk</button>
+                        <Modal
+                            opened={modalOpened}
+                            onClose={() => setModalOpened(false)}
+                            title="Send A Message"
+                        >
+                           <div className='w-full flex flex-col gap-5'>
+                            <TextInput
+                                label="Name"
+                            />
+                            <TextInput
+                                label="Email / Phone"
+                            />
+                            <Textarea
+                                label="Message"
+                            />
+                            <button className='py-3 bg-slate-600 hover:bg-slate-600 text-white rounded-md'>Send</button>
+                        </div>
+                        </Modal>
+                    </section>
+
                     <section>
                         <Social />
                     </section>

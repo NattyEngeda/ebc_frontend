@@ -12,13 +12,14 @@ const Work = () => {
     return (
         <div className="flex flex-col gap-10">
             {/* Top Section */}
-            <div className="flex flex-col gap-2">
-                <p className="text-3xl font-Sanchez">Works</p>
-                <hr className="text-black bg-black border border-black rounded-full w-1/3" />
+            <div className="flex flex-col gap-3 items-center">
+                <h1 className="text-3xl md:text-5xl text-black">Works</h1>
+                <hr className="w-1/6 text-red-800 border-2 border-red-800" />
             </div>
             {/* Bottom Section */}
             <div className="flex flex-col gap-5">
-                <div className="grid grid-cols-2 gap-5">
+                <h1>Swiper</h1>
+                {/* <div className="grid grid-cols-2 gap-5">
                     <Image
                         loader={myLoader}
                         src={img1}
@@ -42,7 +43,7 @@ const Work = () => {
                         width={500}
                         height={500}
                     />
-                </div>
+                </div> */}
             </div>
         </div>
     );

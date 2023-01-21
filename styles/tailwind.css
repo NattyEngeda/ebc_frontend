@@ -14,9 +14,9 @@
         @apply border border-gray-200;
     }
     .socialiconcontainer{
-        @apply  rounded-full p-2;
+        @apply  rounded-full p-2 flex flex-row items-center justify-center;
     }
     .socialicons{
-        @apply w-8 h-8 text-white;
+        @apply w-6 h-6 text-white;
     }
 }

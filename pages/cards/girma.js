@@ -19,6 +19,25 @@ import Message from "./components/Message";
 import placeholder from '../../assets/images/placeholder/placeholder.png';
 import image from '../../assets/images/placeholder/placeholder.png'
 
+import carrier from '../../assets/images/clients/girma/carrier.png';
+import clivet from '../../assets/images/clients/girma/clivet.jpg';
+import hp from '../../assets/images/clients/girma/hp.jpg';
+import rak from '../../assets/images/clients/girma/rak.jpg';
+import rifeng from '../../assets/images/clients/girma/rifeng.jpg';
+import gf from '../../assets/images/clients/girma/gf.png';
+
+// Girma
+import girmaLogo from '../../assets/images/logo/girma.jpg';
+
+const clients = [
+    { id: 1, name: "carrier", image: carrier },
+    { id: 2, name: "clivet", image: clivet },
+    { id: 3, name: "hp", image: hp },
+    { id: 4, name: "rak", image: rak },
+    { id: 5, name: "rifeng", image: rifeng },
+    { id: 6, name: "gf", image: gf },
+]
+
 const Yonas = () => {
     const router = useRouter();
     const skill = [1, 2, 3, 4, 5, 6];
@@ -27,7 +46,6 @@ const Yonas = () => {
     const myLoader = ({ src, width, quality }) => {
         return `${src}?w=${width}&q=${quality || 75}`
     }
-
 
     return (
         <>
@@ -40,10 +58,19 @@ const Yonas = () => {
             <main className="flex flex-col w-full bg-gradient-to-br from-slate-700 via-violet-500 to-purple-700  min-h-screen  mx-auto">
                 {/* <ProfileImage /> */}
 
-                <section className="contianer flex flex-col items-start justify-center py-1 px-10 gap-10 min-h-screen">
+                <section className=" flex flex-col items-start justify-center py-1 px-5 md:px-20 gap-10 min-h-screen">
                     <div className="flex flex-col gap-10">
                         <div className="flex flex-col gap-2 md:gap-5">
-                            <h1 className="text-3xl md:text-6xl text-white">Sanitary Systems and Elector Mechanical System Contractor</h1>
+                            <h1 className="hidden text-3xl md:text-6xl text-white">Sanitary Systems and Elector Mechanical System Contractor</h1>
+                            <Image
+                                className="rounded-2xl"
+                                loader={myLoader}
+                                src={girmaLogo}
+                                alt="Girma Logo"
+                                width={500}
+                                height={500}
+                            />
+
                             <hr className="w-1/3" />
                         </div>
                         <div className="flex flex-col gap-2 md:gap-5">
@@ -70,6 +97,7 @@ const Yonas = () => {
                                 skill.map((items) => (
                                     <div className="flex flex-col gap-5 rounded-xl overflow-hidden" key={items}>
                                         <Image
+                                        className="rounded-xl"
                                             loader={myLoader}
                                             src={placeholder}
                                             alt="Placeholder"
@@ -89,14 +117,14 @@ const Yonas = () => {
                             <h1 className="text-3xl md:text-5xl text-black">Clients</h1>
                             <hr className="w-1/6 text-red-800 border-2 border-red-800" />
                         </div>
-                        <div className="min-h-40vh grid grid-cols-2 md:grid-cols-3 gap-10 px-5 md:px-20">
+                        <div className="min-h-40vh grid grid-cols-2 md:grid-cols-3 gap-10  md:px-20">
                             {
-                                skill.map((items) => (
-                                    <div className="flex flex-col gap-4 rounded-xl overflow-hidden" key={items}>
+                                clients.map((items) => (
+                                    <div className="flex flex-col h-32 md:h-60 w-full bg-white items-center justify-center gap-4 rounded-xl overflow-hidden border border-gray-300 shadow-lg hover:shadow-xl" key={items.id}>
                                         <Image
                                             loader={myLoader}
-                                            src={placeholder}
-                                            alt="Placeholder"
+                                            src={items.image}
+                                            alt={items.name}
                                             width={500}
                                             height={500}
                                         />
@@ -108,10 +136,10 @@ const Yonas = () => {
 
                     <section className="flex flex-col gap-5 flex-wrap">
                         {/* Work */}
-                        <Work />
+                        {/* <Work /> */}
 
                         {/* Project */}
-                        <Project />
+                        {/* <Project /> */}
 
                         {/* Message */}
                         {/* <Message /> */}
@@ -145,19 +173,19 @@ const Yonas = () => {
                             onClose={() => setModalOpened(false)}
                             title="Send A Message"
                         >
-                           <div className='w-full flex flex-col gap-5'>
-                            <TextInput
-                                label="Name"
-                            />
-                            <TextInput
-                                label="Email / Phone"
-                            />
-                            <Textarea
+                            <div className='w-full flex flex-col gap-5'>
+                                <TextInput
+                                    label="Name"
+                                />
+                                <TextInput
+                                    label="Email / Phone"
+                                />
+                                <Textarea
                                 maxRows={6}
-                                label="Message"
-                            />
-                            <button className='py-3 bg-slate-600 hover:bg-slate-600 text-white rounded-md'>Send</button>
-                        </div>
+                                    label="Message"
+                                />
+                                <button className='py-3 bg-slate-600 hover:bg-slate-600 text-white rounded-md'>Send</button>
+                            </div>
                         </Modal>
                     </section>
 

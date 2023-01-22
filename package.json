@@ -11,8 +11,10 @@
     "build-static": "next build && next export"
   },
   "dependencies": {
-    "@mantine/core": "^5.9.5",
+    "@mantine/core": "^5.10.1",
     "@mantine/form": "^5.9.5",
+    "@mantine/hooks": "^5.10.1",
+    "@mantine/nprogress": "^5.10.1",
     "@next/font": "13.1.0",
     "axios": "^1.2.1",
     "daisyui": "^2.46.0",

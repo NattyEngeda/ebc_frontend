@@ -47,7 +47,7 @@ const Yonas = () => {
                             <hr className="w-1/3" />
                         </div>
                         <div className="flex flex-col gap-2 md:gap-5">
-                            <p className="text-2xl md:text-4xl text-white">Grima Atlabachew</p>
+                            <p className="text-2xl md:text-4xl text-white">GIRMA ATLABACHEW</p>
                             <hr className="w-1/3" />
                         </div>
                     </div>
@@ -153,6 +153,7 @@ const Yonas = () => {
                                 label="Email / Phone"
                             />
                             <Textarea
+                                maxRows={6}
                                 label="Message"
                             />
                             <button className='py-3 bg-slate-600 hover:bg-slate-600 text-white rounded-md'>Send</button>

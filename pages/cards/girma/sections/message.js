@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Modal, TextInput, Textarea } from '@mantine/core';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+
+// CSS
+import 'react-toastify/dist/ReactToastify.css';
 
 const Message = () => {
     const [modalOpened, setModalOpened] = useState(false);
@@ -8,18 +12,35 @@ const Message = () => {
     const [email, setEmail] = useState();
     const [text, setText] = useState();
 
+    const notify = () => toast.success('🦄 Wow so easy!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+    });
+
     const handleSend = () => {
-        axios.post('/api/girma', 
-        { 
-            name: name, 
-            email: email, 
-            text: text }, 
-        { withCredentials: true })
-        .then(function(response){
-            if(response.data.msg == 'sucess'){
-                console.log('Sent');
-            }
-        })
+        axios.post('http://localhost:8000/girma/add',
+            {
+                name: name,
+                email: email,
+                text: text
+            },
+            { withCredentials: true })
+            .then(function (response) {
+                console.log(response);
+                if (response.data.msg == 'sucess') {
+                    console.log('Sent');
+                    notify;
+                }
+            }).then(function (error) {
+                console.log(error)
+            })
+        console.log(process.env.TEST);
 
         console.log(name, email, text);
     }
@@ -56,6 +77,7 @@ const Message = () => {
                         className='py-3 bg-blue-600 active:bg-blue-800 hover:bg-slate-600 text-white rounded-md'>Send</button>
                 </div>
             </Modal>
+            <ToastContainer />
         </section>
     );
 }

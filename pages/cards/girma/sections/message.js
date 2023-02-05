@@ -6,13 +6,14 @@ import { ToastContainer, toast } from 'react-toastify';
 // CSS
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const Message = () => {
     const [modalOpened, setModalOpened] = useState(false);
     const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [text, setText] = useState();
 
-    const notify = () => toast.success('🦄 Wow so easy!', {
+    const notify = () => toast.success('Message Sent Successfully', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -33,20 +34,22 @@ const Message = () => {
             { withCredentials: true })
             .then(function (response) {
                 console.log(response);
-                if (response.data.msg == 'sucess') {
+                if (response.data.msg == 'success') {
                     console.log('Sent');
-                    notify;
+                    setName('');
+                    setEmail('');
+                    setText('');
+                    setModalOpened(false);
+                    notify();
                 }
             }).then(function (error) {
-                console.log(error)
-            })
-        console.log(process.env.TEST);
+                console.log(error);
 
-        console.log(name, email, text);
+            })
     }
 
     return (
-        <section className="flex flex-row items-center justify-center ">
+        <section className="flex flex-row items-center justify-center px-5">
             <button
                 onClick={() => setModalOpened(true)}
                 className="px-5 py-3 md:px-6 md:py-4 bg-slate-700 hover:bg-slate-800 hover:shadow-lg text-white rounded-lg">Lets Talk</button>

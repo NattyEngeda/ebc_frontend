@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
-import { Modal, TextInput, Textarea } from '@mantine/core';
 
 
 // import ProfileImage from "./components/ProfileImage";
@@ -32,6 +31,7 @@ import SaveContacts from "./sections/savecontacts.";
 import Profile from "./sections/profile";
 import Skills from "./sections/skills";
 import Gallery from "./sections/gallery";
+import Message from "./sections/message";
 
 const clients = [
     { id: 1, name: "carrier", image: carrier },
@@ -46,8 +46,7 @@ const clients = [
 
 const Girma = () => {
     const router = useRouter();
-   
-    const [modalOpened, setModalOpened] = useState(false);
+
 
     const myLoader = ({ src, width, quality }) => {
         return `${src}?w=${width}&q=${quality || 75}`
@@ -68,7 +67,7 @@ const Girma = () => {
                 <SaveContacts />
 
                 {/* <ProfileImage /> */}
-                <Profile/>
+                <Profile />
 
 
                 <section className="flex flex-col gap-8 w-full bg-white px-5 md min-h-screen py-5">
@@ -78,10 +77,10 @@ const Girma = () => {
                     <hr className="text-black bg-black border border-black rounded-full w-5/6 mx-auto" />
 
                     {/* Skills */}
-                    <Skills/>
+                    <Skills />
 
                     {/* Gallery */}
-                    <Gallery/>
+                    <Gallery />
 
                     <section className="flex flex-col gap-10">
                         <div className="flex flex-col gap-3 items-center">
@@ -106,7 +105,7 @@ const Girma = () => {
                     </section>
 
                     <section className="flex flex-col gap-5 flex-wrap">
-                      
+
 
                     </section>
 
@@ -128,30 +127,7 @@ const Girma = () => {
 
                         </div>
                     </section>
-                    <section className="flex flex-row items-center justify-center ">
-                        <button
-                            onClick={() => setModalOpened(true)}
-                            className="px-5 py-3 md:px-6 md:py-4 bg-slate-700 hover:bg-slate-800 hover:shadow-lg text-white rounded-lg">Lets Talk</button>
-                        <Modal
-                            opened={modalOpened}
-                            onClose={() => setModalOpened(false)}
-                            title="Send A Message"
-                        >
-                            <div className='w-full flex flex-col gap-5'>
-                                <TextInput
-                                    label="Name"
-                                />
-                                <TextInput
-                                    label="Email / Phone"
-                                />
-                                <Textarea
-                                    maxRows={6}
-                                    label="Message"
-                                />
-                                <button className='py-3 bg-slate-600 hover:bg-slate-600 text-white rounded-md'>Send</button>
-                            </div>
-                        </Modal>
-                    </section>
+                    <Message />
 
                     <section>
                         <Social />

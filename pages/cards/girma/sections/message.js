@@ -25,7 +25,7 @@ const Message = () => {
     });
 
     const handleSend = () => {
-        axios.post('http://localhost:8000/girma/add',
+        axios.post('https://yeneapi.alamondai.com/girma/add',
             {
                 name: name,
                 email: email,

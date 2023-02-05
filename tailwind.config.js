@@ -13,6 +13,9 @@ module.exports = {
         'Sanchez': ['Sanchez', 'serif']
       }
     },
+    // backgroundImage: {
+    //   'girma-back': "url()"
+    // }
   },
   plugins: [
     // require("daisyui"),

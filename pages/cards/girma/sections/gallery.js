@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Carousel } from '@mantine/carousel';
 
 // Images
 import img1 from '../../../../assets/images/girma/photos/1.jpg';
@@ -9,6 +10,64 @@ import img4 from '../../../../assets/images/girma/photos/4.jpg';
 import img5 from '../../../../assets/images/girma/photos/5.jpg';
 import img6 from '../../../../assets/images/girma/photos/6.jpg';
 
+import fire1 from '/assets/images/girma/gallery/Fire Fithing/1.jpg';
+import fire2 from '/assets/images/girma/gallery/Fire Fithing/2.jpg';
+import fire3 from '/assets/images/girma/gallery/Fire Fithing/3.jpg';
+import fire4 from '/assets/images/girma/gallery/Fire Fithing/4.jpg';
+import fire5 from '/assets/images/girma/gallery/Fire Fithing/5.jpg';
+import fire6 from '/assets/images/girma/gallery/Fire Fithing/6.jpg';
+
+import san1 from '../../../../assets/images/girma/gallery/Sanitary Works/1.jpg';
+import san2 from '../../../../assets/images/girma/gallery/Sanitary Works/2.jpg';
+import san3 from '../../../../assets/images/girma/gallery/Sanitary Works/3.jpg';
+import san4 from '../../../../assets/images/girma/gallery/Sanitary Works/4.jpg';
+import san5 from '../../../../assets/images/girma/gallery/Sanitary Works/5.jpg';
+import san6 from '../../../../assets/images/girma/gallery/Sanitary Works/6.jpg';
+
+import fix1 from '/assets/images/girma/gallery/Fixiture Fixing/1.jpg';
+import fix2 from '/assets/images/girma/gallery/Fixiture Fixing/2.jpg';
+import fix3 from '/assets/images/girma/gallery/Fixiture Fixing/3.jpg';
+import fix4 from '/assets/images/girma/gallery/Fixiture Fixing/4.jpg';
+import fix5 from '/assets/images/girma/gallery/Fixiture Fixing/5.jpg';
+import fix6 from '/assets/images/girma/gallery/Fixiture Fixing/6.jpg';
+import fix7 from '/assets/images/girma/gallery/Fixiture Fixing/7.jpg';
+import fix8 from '/assets/images/girma/gallery/Fixiture Fixing/8.jpg';
+import fix9 from '/assets/images/girma/gallery/Fixiture Fixing/9.jpg';
+import fix10 from '/assets/images/girma/gallery/Fixiture Fixing/10.jpg';
+
+import hvac1 from '../../../../assets/images/girma/gallery/HVAC System/1.jpg';
+import hvac2 from '../../../../assets/images/girma/gallery/HVAC System/2.jpg';
+import hvac3 from '../../../../assets/images/girma/gallery/HVAC System/3.jpg';
+import hvac4 from '../../../../assets/images/girma/gallery/HVAC System/4.jpg';
+import hvac5 from '../../../../assets/images/girma/gallery/HVAC System/5.jpg';
+import hvac6 from '../../../../assets/images/girma/gallery/HVAC System/6.jpg';
+import hvac7 from '../../../../assets/images/girma/gallery/HVAC System/7.jpg';
+import hvac8 from '../../../../assets/images/girma/gallery/HVAC System/8.jpg';
+import hvac9 from '../../../../assets/images/girma/gallery/HVAC System/9.jpg';
+import hvac10 from '../../../../assets/images/girma/gallery/HVAC System/10.jpg';
+import hvac11 from '../../../../assets/images/girma/gallery/HVAC System/11.jpg';
+import hvac12 from '../../../../assets/images/girma/gallery/HVAC System/12.jpg';
+
+import pipe1 from '../../../../assets/images/girma/gallery/Pipe Installation/1.jpg'
+import pipe2 from '../../../../assets/images/girma/gallery/Pipe Installation/2.jpg'
+import pipe3 from '../../../../assets/images/girma/gallery/Pipe Installation/3.jpg'
+import pipe4 from '../../../../assets/images/girma/gallery/Pipe Installation/4.jpg'
+import pipe5 from '../../../../assets/images/girma/gallery/Pipe Installation/5.jpg'
+import pipe6 from '../../../../assets/images/girma/gallery/Pipe Installation/6.jpg'
+import pipe7 from '../../../../assets/images/girma/gallery/Pipe Installation/7.jpg'
+import pipe8 from '../../../../assets/images/girma/gallery/Pipe Installation/8.jpg'
+import pipe9 from '../../../../assets/images/girma/gallery/Pipe Installation/9.jpg'
+import pipe10 from '../../../../assets/images/girma/gallery/Pipe Installation/10.jpg'
+import pipe11 from '../../../../assets/images/girma/gallery/Pipe Installation/11.jpg'
+import pipe12 from '../../../../assets/images/girma/gallery/Pipe Installation/12.jpg'
+import pipe13 from '../../../../assets/images/girma/gallery/Pipe Installation/13.jpg'
+import pipe14 from '../../../../assets/images/girma/gallery/Pipe Installation/14.jpg'
+import pipe15 from '../../../../assets/images/girma/gallery/Pipe Installation/15.jpg'
+import pipe16 from '../../../../assets/images/girma/gallery/Pipe Installation/16.jpg'
+import pipe17 from '../../../../assets/images/girma/gallery/Pipe Installation/17.jpg'
+import pipe18 from '../../../../assets/images/girma/gallery/Pipe Installation/18.jpg'
+import pipe19 from '../../../../assets/images/girma/gallery/Pipe Installation/19.jpg'
+
 const Imgs = [
     { id: 1, img: img1 },
     { id: 2, img: img2 },
@@ -17,11 +76,80 @@ const Imgs = [
     { id: 5, img: img5 },
     { id: 6, img: img6 },
 ];
+
+const FireFighting = [
+    { id: 1, img: fire1, name: '' },
+    { id: 2, img: fire2, name: '' },
+    { id: 3, img: fire3, name: '' },
+    { id: 4, img: fire4, name: '' },
+    { id: 5, img: fire5, name: '' },
+    { id: 6, img: fire6, name: '' },
+];
+
+const SanitaryWork = [
+    { id: 1, img: san1, name: '' },
+    { id: 2, img: san2, name: '' },
+    { id: 3, img: san3, name: '' },
+    { id: 4, img: san4, name: '' },
+    { id: 5, img: san5, name: '' },
+    { id: 6, img: san6, name: '' },
+];
+
+const FixitureFIxing = [
+    { id: 1, img: fix1, name: '' },
+    { id: 2, img: fix2, name: '' },
+    { id: 3, img: fix3, name: '' },
+    { id: 4, img: fix4, name: '' },
+    { id: 5, img: fix5, name: '' },
+    { id: 6, img: fix6, name: '' },
+    { id: 7, img: fix7, name: '' },
+    { id: 8, img: fix8, name: '' },
+    { id: 9, img: fix9, name: '' },
+    { id: 10, img: fix10, name: '' },
+];
+
+const HVACSystem = [
+    { id: 1, img: hvac1, name: '' },
+    { id: 2, img: hvac2, name: '' },
+    { id: 3, img: hvac3, name: '' },
+    { id: 4, img: hvac4, name: '' },
+    { id: 5, img: hvac5, name: '' },
+    { id: 6, img: hvac6, name: '' },
+    { id: 7, img: hvac7, name: '' },
+    { id: 8, img: hvac8, name: '' },
+    { id: 9, img: hvac9, name: '' },
+    { id: 10, img: hvac10, name: '' },
+    { id: 11, img: hvac11, name: '' },
+    { id: 12, img: hvac12, name: '' },
+];
+
+const PipeInstallation = [
+    { id: 1, img: pipe1, name: '' },
+    { id: 2, img: pipe2, name: '' },
+    { id: 3, img: pipe3, name: '' },
+    { id: 4, img: pipe4, name: '' },
+    { id: 5, img: pipe5, name: '' },
+    { id: 6, img: pipe6, name: '' },
+    { id: 7, img: pipe7, name: '' },
+    { id: 8, img: pipe8, name: '' },
+    { id: 9, img: pipe9, name: '' },
+    { id: 10, img: pipe10, name: '' },
+    { id: 11, img: pipe11, name: '' },
+    { id: 12, img: pipe12, name: '' },
+    { id: 13, img: pipe13, name: '' },
+    { id: 14, img: pipe14, name: '' },
+    { id: 15, img: pipe15, name: '' },
+    { id: 16, img: pipe16, name: '' },
+    { id: 17, img: pipe17, name: '' },
+    { id: 18, img: pipe18, name: '' },
+    { id: 19, img: pipe19, name: '' },
+];
+
+
+
 const myLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`
 }
-
-
 
 const Gallery = () => {
     return (
@@ -30,7 +158,141 @@ const Gallery = () => {
                 <h1 className="text-3xl md:text-5xl text-black">Gallery</h1>
                 <hr className="w-1/6 text-red-800 border-2 border-red-800" />
             </div>
-            <div className="min-h-[30vh] grid grid-cols-2 md:grid-cols-3 gap-5 px-1 md:px-20">
+            <div className="min-h-[40vh] flex flex-col gap-10">
+                {/* Sanitary System */}
+                <div className="flex flex-col gap-3 items-starat">
+                    <h1 className="text-2xl md:text-5xl text-black">Sanitary System</h1>
+                    <hr className="w-1/5 text-red-800 border-2 border-red-800" />
+                </div>
+                <div>
+                    <Carousel slideSize="70%" height={200} slideGap="xl" controlsOffset="xs" dragFree>
+                        {
+                            SanitaryWork.map((items) => (
+                                <Carousel.Slide
+                                    key={items.id}>
+                                    <div className="w-full h-full bg-blue-500">
+                                        <Image
+                                            className="w-full h-full"
+                                            loader={myLoader}
+                                            src={items.img}
+                                            alt="Placeholder"
+                                            width={500}
+                                            height={500}
+                                        />
+                                    </div>
+                                </Carousel.Slide>
+                            ))
+                        }
+                    </Carousel>
+                </div>
+                {/* Fire Fighting */}
+                 <div className="flex flex-col gap-3 items-starat">
+                    <h1 className="text-2xl md:text-5xl text-black">Fire Fighting System</h1>
+                    <hr className="w-1/5 text-red-800 border-2 border-red-800" />
+                </div>
+                <div>
+                    <Carousel slideSize="70%" height={200} slideGap="xl" controlsOffset="xs" dragFree>
+                        {
+                            FireFighting.map((items) => (
+                                <Carousel.Slide
+                                    key={items.id}>
+                                    <div className="w-full h-full bg-blue-500">
+                                        <Image
+                                            className="w-full h-full"
+                                            loader={myLoader}
+                                            src={items.img}
+                                            alt="Placeholder"
+                                            width={500}
+                                            height={500}
+                                        />
+                                    </div>
+                                </Carousel.Slide>
+                            ))
+                        }
+                    </Carousel>
+                </div>
+                {/* HVAC System */}
+                 <div className="flex flex-col gap-3 items-starat">
+                    <h1 className="text-2xl md:text-5xl text-black">HVAC System</h1>
+                    <hr className="w-1/5 text-red-800 border-2 border-red-800" />
+                </div>
+                <div>
+                    <Carousel slideSize="70%" height={200} slideGap="xl" controlsOffset="xs" dragFree>
+                        {
+                            HVACSystem.map((items) => (
+                                <Carousel.Slide
+                                    key={items.id}>
+                                    <div className="w-full h-full bg-blue-500">
+                                        <Image
+                                            className="w-full h-full"
+                                            loader={myLoader}
+                                            src={items.img}
+                                            alt="Placeholder"
+                                            width={500}
+                                            height={500}
+                                        />
+                                    </div>
+                                </Carousel.Slide>
+                            ))
+                        }
+                    </Carousel>
+                </div>
+                {/* Fixiture Fixing */}
+                 <div className="flex flex-col gap-3 items-starat">
+                    <h1 className="text-2xl md:text-5xl text-black">Fixiture Fixing</h1>
+                    <hr className="w-1/5 text-red-800 border-2 border-red-800" />
+                </div>
+                <div>
+                    <Carousel slideSize="70%" height={200} slideGap="xl" controlsOffset="xs" dragFree>
+                        {
+                            FixitureFIxing.map((items) => (
+                                <Carousel.Slide
+                                    key={items.id}>
+                                    <div className="w-full h-full bg-blue-500">
+                                        <Image
+                                            className="w-full h-full"
+                                            loader={myLoader}
+                                            src={items.img}
+                                            alt="Placeholder"
+                                            width={500}
+                                            height={500}
+                                        />
+                                    </div>
+                                </Carousel.Slide>
+                            ))
+                        }
+                    </Carousel>
+                </div>
+                {/* Pipe Installation */}
+                 <div className="flex flex-col gap-3 items-starat">
+                    <h1 className="text-2xl md:text-5xl text-black">Pipe Installation</h1>
+                    <hr className="w-1/5 text-red-800 border-2 border-red-800" />
+                </div>
+                <div>
+                    <Carousel slideSize="70%" height={200} slideGap="xl" controlsOffset="xs" dragFree>
+                        {
+                            PipeInstallation.map((items) => (
+                                <Carousel.Slide
+                                    key={items.id}>
+                                    <div className="w-full h-full bg-blue-500">
+                                        <Image
+                                            className="w-full h-full"
+                                            loader={myLoader}
+                                            src={items.img}
+                                            alt="Placeholder"
+                                            width={500}
+                                            height={500}
+                                        />
+                                    </div>
+                                </Carousel.Slide>
+                            ))
+                        }
+                    </Carousel>
+                </div>
+
+            </div>
+
+            {/* <div className="min-h-[30vh] grid grid-cols-2 md:grid-cols-3 gap-5 px-1 md:px-20">
                 {
                     Imgs.map((items) => (
                         <div 
@@ -47,13 +309,13 @@ const Gallery = () => {
                         </div>
                     ))
                 }
-            </div>
-            <div className="px-2 md:px-20 w-full flex flex-row items-cener justify-end">
+            </div> */}
+            {/* <div className="px-2 md:px-20 w-full flex flex-row items-cener justify-end">
                 <Link
                     href='/cards/girma/gallery'
                     className="text-xl font-bolc text-red-700"
                 >{'See more >>'}</Link>
-            </div>
+            </div> */}
         </section>
     );
 }

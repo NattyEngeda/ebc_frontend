@@ -6,7 +6,6 @@ const myLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`
 }
 
-
 const GalleryPage = () => {
     return (
         <section className="flex flex-col gap-10">

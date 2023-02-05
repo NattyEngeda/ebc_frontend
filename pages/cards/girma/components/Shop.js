@@ -1,24 +1,26 @@
 import Image from "next/image";
 
 // Images
-import img1 from '../../../assets/images/work1.png';
-import img2 from '../../../assets/images/work2.png';
-import img3 from '../../../assets/images/work3.png';
+import img1 from '../../../../assets/images/shop1.png';
+import img2 from '../../../../assets/images/shop2.png'
+import img3 from '../../../../assets/images/shop3.png'
 
-const Work = () => {
+const Shop = () => {
+
     const myLoader = ({ src, width, quality }) => {
         return `${src}?w=${width}&q=${quality || 75}`
     }
+
+
     return (
         <div className="flex flex-col gap-10">
             {/* Top Section */}
-            <div className="flex flex-col gap-3 items-center">
-                <h1 className="text-3xl md:text-5xl text-black">Works</h1>
-                <hr className="w-1/6 text-red-800 border-2 border-red-800" />
+            <div className="flex flex-col gap-2">
+                <p className="text-3xl font-Sanchez">Shop</p>
+                <hr className="text-black bg-black border border-black rounded-full w-1/3" />
             </div>
             {/* Bottom Section */}
-            <div className="container flex flex-col gap-5">
-                {/* <h1>Swiper</h1> */}
+            <div className="flex flex-col gap-5">
                 <div className="grid grid-cols-2 gap-5">
                     <Image
                         loader={myLoader}
@@ -40,7 +42,7 @@ const Work = () => {
                         loader={myLoader}
                         src={img3}
                         alt="Picture of the author"
-                        // width={500}
+                        width={500}
                         height={500}
                     />
                 </div>
@@ -49,4 +51,4 @@ const Work = () => {
     );
 }
 
-export default Work;
+export default Shop;

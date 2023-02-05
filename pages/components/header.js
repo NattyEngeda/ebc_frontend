@@ -1,22 +1,50 @@
+import { useState, useEffect } from 'react';
+import cx from 'clsx';
+import Image from 'next/image';
+
+// Images
+import logo from '../../assets/images/logo/logo.png';
+import fullLogo from '../../assets/images/logo/logo_full.jpg';
+
+
+const imageLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`
+};
+
 const Header = () => {
+    const [scroll, setScroll] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            setScroll(window.scrollY > 0);
+        });
+    }, []);
+    console.log(scroll)
+
+    const headerClass = cx(
+        `fixed w-full h-20 bg-white flex flex-row items-center justify-between px-10 z-50 transition-all duration-300 ease-in-out`,
+        scroll == true && 'boorshad shadow-lg'
+    );
     return (
         <>
-            <header className="fixed bg-white w-full text-gray-600 body-font shadow-lg">
-                <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-                    <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                        </svg>
-                        <span className="ml-3 text-xl">EBC</span>
-                    </a>
-                    <nav className="hidden md:ml-auto md:flex flex-wrap items-center text-base justify-center">
-                        <a className="mr-5 hover:text-gray-900">First Link</a>
-                        <a className="mr-5 hover:text-gray-900">Second Link</a>
-                        <a className="mr-5 hover:text-gray-900">Third Link</a>
-                        <a className="mr-5 hover:text-gray-900">Fourth Link</a>
-                    </nav>
-
+            <header className={headerClass}>
+            <div className='flex flex-row items-start gap-5'>
+                <Image
+                    className='w-10'
+                    loader={imageLoader}
+                    src={logo}
+                    alt="Logo"
+                    width={100}
+                    height={100}
+                /> 
+                <div>
+                    <h1 className='text-lg text-green-600'>Yene Card</h1>
+                    <p className='text-sm text-gray-600'>The way I want</p>
                 </div>
+            </div>
+            <div>
+
+            </div>
             </header>
         </>
     );

@@ -33,7 +33,9 @@ const Gallery = () => {
             <div className="min-h-[30vh] grid grid-cols-2 md:grid-cols-3 gap-5 px-1 md:px-20">
                 {
                     Imgs.map((items) => (
-                        <div className="w-full h-44">
+                        <div 
+                        key={items.id}
+                        className="w-full h-44">
                             <Image
                                 className="w-full h-full"
                                 loader={myLoader}
@@ -45,7 +47,6 @@ const Gallery = () => {
                         </div>
                     ))
                 }
-
             </div>
             <div className="px-2 md:px-20 w-full flex flex-row items-cener justify-end">
                 <Link

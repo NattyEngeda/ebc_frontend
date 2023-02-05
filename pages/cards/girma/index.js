@@ -5,15 +5,15 @@ import Image from "next/image";
 import { Modal, TextInput, Textarea } from '@mantine/core';
 
 
-import ProfileImage from "./components/ProfileImage";
-import PersonalInfo from "./components/PersonalInfo";
+// import ProfileImage from "./components/ProfileImage";
+// import PersonalInfo from "./components/PersonalInfo";
 import Social from "./components/Social";
 import Contact from "./components/Contact";
-import Shop from "./components/Shop";
-import Work from "./components/Work";
+// import Shop from "./components/Shop";
+// import Work from "./components/Work";
 import Footer from "./components/Footer";
-import Project from "./components/Project";
-import Message from "./components/Message";
+// import Project from "./components/Project";
+// import Message from "./components/Message";
 
 // Images
 import placeholder from '../../../assets/images/placeholder/placeholder.png';

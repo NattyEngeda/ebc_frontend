@@ -208,7 +208,6 @@ const Gallery = () => {
                                     }
                                 </Carousel>
                             </div>
-
                         </div>
                     </>
                 ))

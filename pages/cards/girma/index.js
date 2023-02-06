@@ -58,10 +58,19 @@ const Girma = () => {
             <Head>
                 <title>Grima Atlabachew</title>
                 <meta name="description" content="Girma Atlabachew - Sanitary and Mechanical Contractor" />
+                <meta property="og:title" content="Girma" />
+                <meta
+                    property="og:description"
+                    content="Girma Atlabachew - Sanitary and Mechanical Contractor"
+                />
+                <meta
+                    property="og:image"
+                    content="/back2.png"
+                />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/logo.png" />
             </Head>
-            <main className="flex flex-col w-full bg-gradient-to-br from-slate-700 via-violet-500 to-purple-700  min-h-screen  mx-auto">
+            <main className="flex flex-col w-full bg-gradient-to-br  from-[#3E97D1] via-violet-500 to-[#3F6D8C] min-h-screen  mx-auto">
 
                 {/* Save Contacts */}
                 <SaveContacts />
@@ -124,7 +133,7 @@ const Girma = () => {
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade">
                             </iframe>
-{/* 
+                            {/* 
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5246201596756!2d38.738253199999996!3d9.0158138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85df14fb2625%3A0xe80d3f08b64ff454!2zRGVsaW5hIEJ1aWxkaW5nIHwgbGlkZXRhIHwg4Yuw4YiK4YqTIOGIheGKleGNgyB8IOGIjeGLsOGJsw!5e0!3m2!1sam!2set!4v1675601013084!5m2!1sam!2set" 
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
                             referrerpolicy="no-referrer-when-downgrade"></iframe> */}

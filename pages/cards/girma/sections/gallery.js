@@ -85,71 +85,71 @@ const Images = [
         id: 2,
         name: 'Fire Fighting',
         imgs: [
-            { id: 1, img: fire1, name: '' },
-            { id: 2, img: fire2, name: '' },
-            { id: 3, img: fire3, name: '' },
-            { id: 4, img: fire4, name: '' },
-            { id: 5, img: fire5, name: '' },
-            { id: 6, img: fire6, name: '' }
+            { id: 91, img: fire1, name: '' },
+            { id: 92, img: fire2, name: '' },
+            { id: 93, img: fire3, name: '' },
+            { id: 94, img: fire4, name: '' },
+            { id: 95, img: fire5, name: '' },
+            { id: 96, img: fire6, name: '' }
         ]
     },
     {
         id: 3,
         name: 'Fixiture Fixing',
         imgs: [
-            { id: 1, img: fix1, name: '' },
-            { id: 2, img: fix2, name: '' },
-            { id: 3, img: fix3, name: '' },
-            { id: 4, img: fix4, name: '' },
-            { id: 5, img: fix5, name: '' },
-            { id: 6, img: fix6, name: '' },
-            { id: 7, img: fix7, name: '' },
-            { id: 8, img: fix8, name: '' },
-            { id: 9, img: fix9, name: '' },
-            { id: 10, img: fix10, name: '' },
+            { id: 81, img: fix1, name: '' },
+            { id: 82, img: fix2, name: '' },
+            { id: 83, img: fix3, name: '' },
+            { id: 84, img: fix4, name: '' },
+            { id: 85, img: fix5, name: '' },
+            { id: 86, img: fix6, name: '' },
+            { id: 87, img: fix7, name: '' },
+            { id: 88, img: fix8, name: '' },
+            { id: 89, img: fix9, name: '' },
+            { id: 810, img: fix10, name: '' },
         ]
     },
     {
         id: 4,
         name: 'HVAC System',
         imgs: [
-            { id: 1, img: hvac1, name: '' },
-            { id: 2, img: hvac2, name: '' },
-            { id: 3, img: hvac3, name: '' },
-            { id: 4, img: hvac4, name: '' },
-            { id: 5, img: hvac5, name: '' },
-            { id: 6, img: hvac6, name: '' },
-            { id: 7, img: hvac7, name: '' },
-            { id: 8, img: hvac8, name: '' },
-            { id: 9, img: hvac9, name: '' },
-            { id: 10, img: hvac10, name: '' },
-            { id: 11, img: hvac11, name: '' },
-            { id: 12, img: hvac12, name: '' },
+            { id: 81, img: hvac1, name: '' },
+            { id: 82, img: hvac2, name: '' },
+            { id: 83, img: hvac3, name: '' },
+            { id: 84, img: hvac4, name: '' },
+            { id: 85, img: hvac5, name: '' },
+            { id: 86, img: hvac6, name: '' },
+            { id: 87, img: hvac7, name: '' },
+            { id: 88, img: hvac8, name: '' },
+            { id: 89, img: hvac9, name: '' },
+            { id: 810, img: hvac10, name: '' },
+            { id: 811, img: hvac11, name: '' },
+            { id: 812, img: hvac12, name: '' },
         ]
     },
     {
         id: 5,
         name: 'Pipe Installation',
         imgs: [
-            { id: 1, img: pipe1, name: '' },
-            { id: 2, img: pipe2, name: '' },
-            { id: 3, img: pipe3, name: '' },
-            { id: 4, img: pipe4, name: '' },
-            { id: 5, img: pipe5, name: '' },
-            { id: 6, img: pipe6, name: '' },
-            { id: 7, img: pipe7, name: '' },
-            { id: 8, img: pipe8, name: '' },
-            { id: 9, img: pipe9, name: '' },
-            { id: 10, img: pipe10, name: '' },
-            { id: 11, img: pipe11, name: '' },
-            { id: 12, img: pipe12, name: '' },
-            { id: 13, img: pipe13, name: '' },
-            { id: 14, img: pipe14, name: '' },
-            { id: 15, img: pipe15, name: '' },
-            { id: 16, img: pipe16, name: '' },
-            { id: 17, img: pipe17, name: '' },
-            { id: 18, img: pipe18, name: '' },
-            { id: 19, img: pipe19, name: '' },
+            { id: 71, img: pipe1, name: '' },
+            { id: 72, img: pipe2, name: '' },
+            { id: 73, img: pipe3, name: '' },
+            { id: 74, img: pipe4, name: '' },
+            { id: 75, img: pipe5, name: '' },
+            { id: 76, img: pipe6, name: '' },
+            { id: 77, img: pipe7, name: '' },
+            { id: 78, img: pipe8, name: '' },
+            { id: 79, img: pipe9, name: '' },
+            { id: 710, img: pipe10, name: '' },
+            { id: 711, img: pipe11, name: '' },
+            { id: 712, img: pipe12, name: '' },
+            { id: 713, img: pipe13, name: '' },
+            { id: 714, img: pipe14, name: '' },
+            { id: 715, img: pipe15, name: '' },
+            { id: 716, img: pipe16, name: '' },
+            { id: 717, img: pipe17, name: '' },
+            { id: 718, img: pipe18, name: '' },
+            { id: 719, img: pipe19, name: '' },
         ]
     }
 ];
@@ -180,16 +180,12 @@ const Gallery = () => {
                             <div>
                                 <Carousel
                                     align="start"
-                                    //  slideSize="70%" 
-                                    //  height={200} 
                                     slideGap="xl"
                                     breakpoints={[
                                         { maxWidth: 'sm', slideSize: '70%', slideGap: "xl", height: '200' },
                                         { maxWidth: 'md', slideSize: '50%', slideGap: "xl", height: '259' },
                                         { maxWidth: 'lg', slideSize: '30%', slideGap: "xl", height: '300' },
                                         { maxWidth: 'xl', slideSize: '30%', slideGap: "xl", height: '300' },
-
-
                                     ]}
                                     controlsOffset="xs"
                                     dragFree>
@@ -217,7 +213,6 @@ const Gallery = () => {
                     </>
                 ))
             }
-
         </section>
     );
 }

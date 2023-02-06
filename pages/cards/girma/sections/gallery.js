@@ -93,7 +93,6 @@ const Images = [
             { id: 6, img: fire6, name: '' }
         ]
     },
-
     {
         id: 3,
         name: 'Fixiture Fixing',
@@ -153,13 +152,7 @@ const Images = [
             { id: 19, img: pipe19, name: '' },
         ]
     }
-
 ];
-
-
-
-
-
 
 const myLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`
@@ -228,5 +221,4 @@ const Gallery = () => {
         </section>
     );
 }
-
 export default Gallery;

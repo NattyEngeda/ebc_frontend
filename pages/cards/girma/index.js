@@ -58,7 +58,7 @@ const Girma = () => {
             <Head>
                 <title>Grima Atlabachew</title>
                 <meta name="description" content="Girma Atlabachew - Sanitary and Mechanical Contractor" />
-                <meta property="og:title" content="Social Title for Cool Page" />
+                <meta property="og:title" content="Girma Atlabachew" />
                 <meta
                     property="og:description"
                     content="Girma Atlabachew - Sanitary and Mechanical Contractor"

@@ -153,7 +153,7 @@ const myLoader = ({ src, width, quality }) => {
 
 const Gallery = () => {
     return (
-        <section className="flex flex-col gap-10">
+        <section className="flex flex-col gap-10 md:px-20">
             <div className="flex flex-col gap-3 items-center">
                 <h1 className="text-3xl md:text-5xl text-black">Gallery</h1>
                 <hr className="w-1/6 text-red-800 border-2 border-red-800" />
@@ -170,9 +170,9 @@ const Gallery = () => {
                             SanitaryWork.map((items) => (
                                 <Carousel.Slide
                                     key={items.id}>
-                                    <div className="w-full h-full bg-blue-500">
+                                    <div className="w-full md:w-1/4 h-full bg-blue-500">
                                         <Image
-                                            className="w-full h-full"
+                                            className="w-full md:w-auto h-full"
                                             loader={myLoader}
                                             src={items.img}
                                             alt="Placeholder"

@@ -58,17 +58,17 @@ const Girma = () => {
             <Head>
                 <title>Grima Atlabachew</title>
                 <meta name="description" content="Girma Atlabachew - Sanitary and Mechanical Contractor" />
-                <meta property="og:title" content="Girma Atlabachew" />
+                <meta property="og:title" content="Girma" />
                 <meta
                     property="og:description"
                     content="Girma Atlabachew - Sanitary and Mechanical Contractor"
                 />
                 <meta
                     property="og:image"
-                    content="https://example.com/images/cool-page.jpg"
+                    content="/back2.png"
                 />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/back2.png" />
+                <link rel="icon" href="/logo.png" />
             </Head>
             <main className="flex flex-col w-full bg-gradient-to-br  from-[#3E97D1] via-violet-500 to-[#3F6D8C] min-h-screen  mx-auto">
 

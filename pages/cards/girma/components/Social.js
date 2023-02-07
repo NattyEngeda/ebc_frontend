@@ -12,7 +12,7 @@ const Social = () => {
                     className="socialicons " />
             </a>
             <a
-                href="https://www.telegram.com"
+                href="https://t.me/Girmaatlabachew"
                 target="_blank"
                 rel='noreferrer'
                 className="socialiconcontainer bg-blue-800">

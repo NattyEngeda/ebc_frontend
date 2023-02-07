@@ -13,7 +13,7 @@ const myLoader = ({ src, width, quality }) => {
 
 const saveFile = () => {
     saveAs(
-        "/Girma_Atlabachew.vcf",
+        "/Girma Atlabachew.vcf",
         "GrimaAtlabachew"
     );
 };

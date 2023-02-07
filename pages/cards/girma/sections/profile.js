@@ -11,7 +11,7 @@ const Profile = () => {
         return `${src}?w=${width}&q=${quality || 75}`
     }
 
-    console.log(back);
+    // console.log(back);
     return (
         <section className=" flex flex-col items-start justify-center py-1 px-5 md:px-20 gap-10 ">
             <div className="flex flex-col gap-10">

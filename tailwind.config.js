@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -21,7 +22,7 @@ module.exports = {
     // require("daisyui"),
     require('tw-elements/dist/plugin'),
   ],
-  daisyui:{
+  daisyui: {
     styled: true,
     themes: true,
     base: true,

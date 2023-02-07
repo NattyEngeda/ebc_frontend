@@ -10,13 +10,13 @@ const list = [
 ];
 const Contact = () => {
     return (
-        <div className="flex flex-col gap-5 w-full px-5 md:px-20">
+        <div className="flex flex-col gap-5 w-full md:px-20">
             <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-3">
                 {
                     list.map((items) => (
                         <div
                             key={items.id}
-                            className="rounded-xl boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
+                            className="w-full rounded-xl boorshad shadow-lg p-2 py-4 flex flex-row gap-5 items-center">
                             {items.icon}
                             <a
                                 href={items.href}

@@ -11,12 +11,7 @@ const Profile = () => {
         <section className=" flex flex-col items-start justify-center py-1 px-5 md:px-10 gap-10 ">
             <div className="flex flex-col gap-10">
                 <div className="grid grid-cols-1 items-center justify-start gap-2 md:gap-5 py-10">
-                    <div
-                        style={{
-                            width: 350,
-                            height: 200,
-                        }}
-                        className=' overflow-hidden bg-cover bg-no-repeat w-full h-72 relative normboor shadow-xl rounded-2xl  '>
+                    <div className='w-full h-[200px] overflow-hidden bg-cover bg-no-repeat relative normboor shadow-xl rounded-2xl  '>
                         <div className='absolute z-10 top-0 left-0'>
                             <Image
                                 className=""

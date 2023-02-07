@@ -5,8 +5,6 @@ import { ToastContainer, toast } from 'react-toastify';
 
 // CSS
 import 'react-toastify/dist/ReactToastify.css';
-
-
 const Message = () => {
     const [modalOpened, setModalOpened] = useState(false);
     const [name, setName] = useState();

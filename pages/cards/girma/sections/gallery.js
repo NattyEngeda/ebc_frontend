@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Carousel } from '@mantine/carousel';
-
 // Images
 import img1 from '../../../../assets/images/girma/photos/1.jpg';
 import img2 from '../../../../assets/images/girma/photos/2.jpg';
@@ -165,7 +164,6 @@ const Gallery = () => {
                 <h1 className="text-3xl md:text-5xl text-black">Gallery</h1>
                 <hr className="w-1/6 text-red-800 border-2 border-red-800" />
             </div>
-            {/* For sm */}
             {
                 Images.map((items) => (
                     <>

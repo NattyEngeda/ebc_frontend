@@ -29,7 +29,6 @@ const skill = [
     }
 ];
 
-
 const myLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`
 }
@@ -41,21 +40,16 @@ const Skills = () => {
     const handleModal = (items) => {
         setCurrentInfo(items);
         setModalOpen(true);
-        console.log(currentInfo);
     }
-
     return (
         <>
             {currentInfo &&
                 <Modal
                     opened={modalOpen}
                     onClose={() => setModalOpen(false)}
-                    title={currentInfo.name}
+                    title={<h1 className="font-bold text-lg">{currentInfo.name}</h1>}
                 >
                     <div className="w-full flex flex-col gap-5 px-1 md:px-10">
-                        <div>
-                            <h1 className="font-bold text-lg">What we Offer</h1>
-                        </div>
                         <div>
                             <ul className="list-disc">
                                 {
@@ -70,7 +64,6 @@ const Skills = () => {
                                 }
                             </ul>
                         </div>
-
                     </div>
                 </Modal>
             }
@@ -109,13 +102,9 @@ const Skills = () => {
                             </div>
                         ))
                     }
-
                 </div>
             </section>
-
         </>
-
     );
 }
-
 export default Skills;

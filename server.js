@@ -3,7 +3,7 @@ const { parse } = require('url')
 const next = require('next')
 
 const dev = true;
-const hostname = 'localhost'
+const hostname = 'yenecard.alamondai.com'
 const port = 0;
 
 const app = next({ dev, hostname, port })
@@ -27,7 +27,7 @@ app.prepare().then(() => {
       res.statusCode = 500
       res.end('internal server error')
     }
-  }).listen( (err) => {
+  }).listen(port, (err) => {
     if (err) throw err
     console.log(`> Ready on http://${hostname}:${port}`)
   })

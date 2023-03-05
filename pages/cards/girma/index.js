@@ -14,9 +14,12 @@ import Gallery from "./sections/gallery";
 import Message from "./sections/message";
 import Clients from "./sections/clients";
 import Location from "./sections/location";
-
+import useScrollPosition from "../../hooks/useScrollPosition";
 
 const Girma = () => {
+    const scrollPosition = useScrollPosition();
+    console.log(scrollPosition);
+
     return (
         <>
             <Head>

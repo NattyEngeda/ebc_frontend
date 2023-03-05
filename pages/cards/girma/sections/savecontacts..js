@@ -5,7 +5,6 @@ import { saveAs } from "file-saver";
 // Images
 import logo from '/assets/images/girma/logo/logo.png'
 
-
 const myLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`
 }
@@ -20,7 +19,7 @@ const saveFile = () => {
 const SaveContacts = () => {
     return (
         <div className="w-full md:w-2/4 h-auto px-5 py-5">
-            <div className="w-full h-16 rounded-xl bg-white flex flex-row items-center justify-between px-5 shadow-xl">
+            <div className="w-full h-16 rounded-xl bg-white flex flex-row items-center justify-between px-2 shadow-xl">
                 <div>
                     <Image
                         className="w-12"
@@ -33,7 +32,7 @@ const SaveContacts = () => {
                 </div>
                 <button
                     onClick={saveFile}
-                    className="px-5 py-2  bg-gradient-to-br from-slate-700 via-violet-500 to-purple-700 text-white rounded-xl"> Save Contact</button>
+                    className="px-2 py-3 text-sm  bg-gradient-to-br from-slate-700 via-violet-500 to-purple-700 text-white rounded-lg"> Save Contact</button>
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ const { parse } = require('url')
 const next = require('next')
 
 const dev = true;
-const hostname = 'yenecard.alamondai.com'
+const hostname = 'localhost'
 const port = 0;
 
 const app = next({ dev, hostname, port })

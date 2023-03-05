@@ -11,6 +11,7 @@
     "build-static": "next build && next export"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
     "@mantine/carousel": "^5.10.3",
     "@mantine/core": "^5.10.1",
     "@mantine/form": "^5.9.5",

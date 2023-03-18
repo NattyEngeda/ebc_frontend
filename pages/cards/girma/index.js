@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-
+import {lazy, Suspense} from "react";
 
 import Social from "./components/Social";
 import Contact from "./components/Contact";
@@ -15,6 +15,7 @@ import Message from "./sections/message";
 import Clients from "./sections/clients";
 import Location from "./sections/location";
 import useScrollPosition from "../../hooks/useScrollPosition";
+
 
 const Girma = () => {
     const scrollPosition = useScrollPosition();

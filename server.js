@@ -3,8 +3,8 @@ const { parse } = require('url')
 const next = require('next')
 
 const dev = true;
-const hostname = 'yenecard.alamondai.com'
-const port = 0;
+const hostname = 'localhost'
+const port = 3000;
 
 const app = next({ dev, hostname, port })
 const handle = app.getRequestHandler()

@@ -28,9 +28,9 @@ const Profile = () => {
                             />
                         </div>
                         <div className='absolute flex flex-col items-start justify-start gap-1 z-20 top-0 left-0 py-5 px-5'>
-                            <h1 className='text-3xl text-white font-bold'>Girma Atlabachew</h1>
-                            <p className='text-2xl text-white font-bold'>General Manager</p>
-                            <p className='text-lg text-white font-light'>Sanitary and Mechanical <br />Contractor</p>
+                            <h1 className='text-3xl text-[#267E7C] font-bold'>Girma Atlabachew</h1>
+                            <p className='text-2xl text-[#303642] font-bold'>General Manager</p>
+                            <p className='text-lg text-black font-light'>Sanitary and Mechanical <br />Contractor</p>
                         </div>
                     </div>
                 </div>

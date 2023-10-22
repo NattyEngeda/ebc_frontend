@@ -12,7 +12,8 @@ export async function POST(req: Request, res: NextApiResponse) {
   try {
 
     const res = await req.json();
-    const token = process.env.TELEGRAM_BOT_TOKEN!;
+    // const token = process.env.TELEGRAM_BOT_TOKEN!;
+    const token = '5470855708:AAEC4gl8FvbssZovO9_XXuSLdNQiJNtRbQY';
     const bot = new TelegramBot(token, { polling: true });
 
     // // Telgram Id's 

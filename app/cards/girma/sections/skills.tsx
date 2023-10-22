@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 // import { List, Modal } from "@mantine/core";
-
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
 // Images
 import fire from '/assets/girma/images/skills/fire.jpg';
 import havac from '/assets/girma/images/skills/havac.png';
@@ -37,38 +37,47 @@ const myLoader = ({ src, width, quality }: any) => {
 
 const Skills = () => {
     const [modalOpen, setModalOpen] = useState(false);
+    const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const [currentInfo, setCurrentInfo] = useState<any>();
 
     const handleModal = (items: any) => {
         setCurrentInfo(items);
-        setModalOpen(true);
+        // setModalOpen(true);
+        onOpen();
     }
     return (
         <>
             {currentInfo &&
-                <></>
-                // <Modal
-                //     opened={modalOpen}
-                //     onClose={() => setModalOpen(false)}
-                //     title={<h1 className="font-bold text-lg">{currentInfo.name}</h1>}
-                // >
-                //     <div className="w-full flex flex-col gap-5 px-1 md:px-10">
-                //         <div>
-                //             <ul className="list-disc">
-                //                 {
-                //                     currentInfo.detail.map((items: any) => (
-                //                         <>
-                //                             <li className="font-bold">{items.name}</li>
-                //                             <div>
-                //                                 <p>{items.desc}</p>
-                //                             </div>
-                //                         </>
-                //                     ))
-                //                 }
-                //             </ul>
-                //         </div>
-                //     </div>
-                // </Modal>
+                < Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+                    <ModalContent>
+                        {(onClose) => (
+                            <>
+                                <ModalHeader className="flex flex-col gap-1 font-bold text-lg">{currentInfo.name}</ModalHeader>
+                                <ModalBody>
+                                    <div className="w-full flex flex-col gap-5 px-1 md:px-10">
+                                        <div>
+                                            <ul className="list-disc">
+                                                {
+                                                    currentInfo.detail.map((items: any) => (
+                                                        <>
+                                                            <li
+                                                                key={items.id}
+                                                                className="font-bold">{items.name}</li>
+                                                            <div>
+                                                                <p>{items.desc}</p>
+                                                            </div>
+                                                        </>
+                                                    ))
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </ModalBody>
+
+                            </>
+                        )}
+                    </ModalContent>
+                </Modal>
             }
             <section className="flex flex-col gap-10">
                 <div className="flex flex-col gap-3 items-center">

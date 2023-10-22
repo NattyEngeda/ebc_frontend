@@ -77,12 +77,12 @@ const Images = [
         id: 1,
         name: 'Sanitary Works',
         imgs: [
-            { id: 1, img: san1, name: '' },
-            { id: 2, img: san2, name: '' },
-            { id: 3, img: san3, name: '' },
-            { id: 4, img: san4, name: '' },
-            { id: 5, img: san5, name: '' },
-            { id: 6, img: san6, name: '' },
+            { id: 11, img: san1, name: '' },
+            { id: 21, img: san2, name: '' },
+            { id: 31, img: san3, name: '' },
+            { id: 41, img: san4, name: '' },
+            { id: 51, img: san5, name: '' },
+            { id: 61, img: san6, name: '' },
         ]
     },
     {

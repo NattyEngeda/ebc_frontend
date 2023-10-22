@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from 'react';
-// import { TextInput, Textarea } from '@mantine/core';
 import axios from 'axios';
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';

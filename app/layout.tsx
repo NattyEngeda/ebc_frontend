@@ -1,15 +1,11 @@
-
-
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-// Styles 
-import '../styles/Modal.css';
 
 
 export const metadata: Metadata = {
   title: 'Yene Cards',
-  description: 'Yene Cards Official Page',
+  description: 'Yene Cards Official Page Now',
 }
 
 export default function RootLayout({
@@ -20,7 +16,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-
         {children}
       </body>
     </html >

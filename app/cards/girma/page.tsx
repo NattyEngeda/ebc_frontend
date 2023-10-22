@@ -23,10 +23,10 @@ const Girma = () => {
         />
         <meta
           property="og:image"
-          content="/back2.png"
+          content="/girma/images/seo-image/main-image.png"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/girma/images/logo/logo.png" />
       </Head>
       <main className="flex flex-col w-full bg-gradient-to-br  from-[#3E97D1] via-violet-500 to-[#3F6D8C] min-h-screen  mx-auto">
         <SaveContacts />

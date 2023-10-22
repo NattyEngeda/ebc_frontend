@@ -14,7 +14,7 @@ const Message = () => {
 
     const handleSend = async (Data: any) => {
 
-        await fetch('/api/cards/girma', {
+        await fetch('/api/cards/girma/message', {
             method: 'POST',
             body: JSON.stringify({ name: Data.name, email: Data.email, text: Data.text }),
             headers: {

@@ -9,47 +9,32 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
 import { TextInput, Textarea } from '@mantine/core';
 const Message = () => {
-    const [modalOpened, setModalOpened] = useState(false);
-    const [showModal, setShowModal] = useState(false);
-    const [name, setName] = useState<any>();
-    const [email, setEmail] = useState<any>();
-    const [text, setText] = useState<any>();
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const notify = () => toast.success('Message Sent Successfully', {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-    });
+    const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
 
-    const handleSend = (Data: any) => {
-        console.log(Data)
-        // axios.post('https://yeneapi.alamondai.com/girma/add',
-        //     {
-        //         name: name,
-        //         email: email,
-        //         text: text
-        //     },
-        //     { withCredentials: true })
-        //     .then(function (response: any) {
-        //         console.log(response);
-        //         if (response.data.msg == 'success') {
-        //             console.log('Sent');
-        //             setName('');
-        //             setEmail('');
-        //             setText('');
-        //             setModalOpened(false);
-        //             notify();
-        //         }
-        //     }).then(function (error: any) {
-        //         console.log(error);
+    const handleSend = async (Data: any) => {
 
-        //     })
+        await fetch('/api/cards/girma', {
+            method: 'POST',
+            body: JSON.stringify({ name: Data.name, email: Data.email, text: Data.text }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then((res) => {
+            if (res.status === 200) {
+                reset();
+                toast.success('Message Sent Successfully', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
+            }
+        })
     }
 
     return (
@@ -76,7 +61,7 @@ const Message = () => {
                                         />
                                     </div>
                                     <div className='flex flex-col gap-4'>
-                                        <label htmlFor="">Email</label>
+                                        <label htmlFor="">Email / Phone Number</label>
                                         <input
                                             className='w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-gray-200'
                                             type="text"
@@ -101,6 +86,7 @@ const Message = () => {
                     )}
                 </ModalContent>
             </Modal>
+            <ToastContainer />
         </section>
     );
 }

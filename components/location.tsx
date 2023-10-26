@@ -1,4 +1,4 @@
-const Location = ({ Location }: { Location: string }) => {
+const OfficeLoaction = ({ Location }: { Location: string }) => {
     return (
         <section className="flex flex-col gap-10">
             <div className="flex flex-col gap-3 items-center">
@@ -19,4 +19,4 @@ const Location = ({ Location }: { Location: string }) => {
     );
 }
 
-export default Location;
+export default OfficeLoaction;

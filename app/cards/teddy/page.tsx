@@ -1,24 +1,32 @@
 "use client"
-import SaveContacts from '@/components/SaveContact'
 import React, { useState } from 'react'
+
+// Components
+import SaveContacts from '@/components/SaveContact'
 import Profile from '@/components/Profile';
+import Contact from '@/components/Contact';
+import Skills from '@/components/Skills';
+import Gallery from '@/components/Gallery';
+import Clients from '@/components/Clients';
+import OfficeLoaction from '@/components/Location';
+import Social from '@/components/Social';
+import Message from '@/components/Message';
+import Footer from '@/components/Footer';
 
 // Images
 import logo from '/assets/teddy/images/logo/logo.gif';
 import backgroundImage from '/assets/teddy/images/background/back1.png';
-import Contact from '@/components/Contact';
+
+// Data
 import { contactList } from './data/contactList';
-import Skills from '@/components/Skills';
 import { skillList } from './data/skillList';
-import Gallery from '@/components/Gallery';
 import { galleryList } from './data/galleryList';
-import Clients from '@/components/Clients';
 import { clientList } from './data/clientList';
-import Location from '@/components/location';
-import Message from '../girma/sections/message';
-import Social from '@/components/Social';
 import { socialList } from './data/socialList';
-import Footer from '../../../components/Footer';
+
+
+
+
 
 export default function Teddy() {
   var color1 = 'from-slate-200 via-[#ECBD00] to-[#FFDF00]';
@@ -49,7 +57,7 @@ export default function Teddy() {
         <Skills skill={skillList} />
         <Gallery Images={galleryList} />
         <Clients Clients={clientList} />
-        <Location Location="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d126115.11525087028!2d38.7781448!3d8.9631768!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa!5e0!3m2!1sen!2set!4v1698323863259!5m2!1sen!2set" />
+        <OfficeLoaction Location="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d126115.11525087028!2d38.7781448!3d8.9631768!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa!5e0!3m2!1sen!2set!4v1698323863259!5m2!1sen!2set" />
         <Message user='teddy' />
         <Social list={socialList} />
       </section>

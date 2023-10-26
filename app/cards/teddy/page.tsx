@@ -10,6 +10,8 @@ import Contact from '@/components/Contact';
 import { contactList } from './data/contactList';
 import Skills from '@/components/skills';
 import { skillList } from './data/skillList';
+import Gallery from '@/components/gallery';
+import { galleryList } from './data/galleryList';
 
 export default function Teddy() {
   var color1 = 'from-slate-200 via-[#ECBD00] to-[#FFDF00]';
@@ -38,6 +40,7 @@ export default function Teddy() {
         <Contact list={contactList} />
         <hr className="text-black bg-black border border-black rounded-full w-5/6 mx-auto" />
         <Skills skill={skillList} />
+        <Gallery Images={galleryList} />
       </section>
 
     </main>

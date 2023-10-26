@@ -10,12 +10,14 @@ import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDi
 import { TextInput, Textarea } from '@mantine/core';
 
 const Message = ({ user }: { user: string }) => {
+    const api = 'https://yenecard-back.alamondai.com';
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
 
     const handleSend = async (Data: any) => {
 
-        await fetch('/api/cards/girma/message', {
+
+        await fetch(`${api}/message/send`, {
             method: 'POST',
             body: JSON.stringify({ name: Data.name, email: Data.email, text: Data.text, user: user }),
             headers: {

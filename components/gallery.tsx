@@ -48,7 +48,7 @@ const Gallery = ({ Images }: { Images: any }) => {
                                                 key={item.id}>
                                                 <div className="w-full md:w- h-full bg-white px-2">
                                                     <Image
-                                                        className="w-full md:w-auto h-auto"
+                                                        className="w-full md:w-auto h-full"
                                                         loader={myLoader}
                                                         src={item.img}
                                                         alt="Placeholder"

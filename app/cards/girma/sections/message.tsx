@@ -8,7 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
 import { TextInput, Textarea } from '@mantine/core';
-const Message = () => {
+
+const Message = ({ user }: { user: string }) => {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
 
@@ -16,7 +17,7 @@ const Message = () => {
 
         await fetch('/api/cards/girma/message', {
             method: 'POST',
-            body: JSON.stringify({ name: Data.name, email: Data.email, text: Data.text }),
+            body: JSON.stringify({ name: Data.name, email: Data.email, text: Data.text, user: user }),
             headers: {
                 'Content-Type': 'application/json'
             }

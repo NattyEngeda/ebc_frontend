@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/girma/images/seo-image/main-image.png',
+        url: '/girma/images/seo-image/second-image.png',
         width: 1200,
         height: 630,
         alt: 'Girma Atlabachew - Sanitary and Mechanical Contractor'

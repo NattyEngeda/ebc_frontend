@@ -1,9 +1,45 @@
-import React from 'react'
+"use client"
+import SaveContacts from '@/components/savecontacts.'
+import React, { useState } from 'react'
+import Profile from '@/components/profile';
+
+// Images
+import logo from '/assets/teddy/images/logo/logo.gif';
+import backgroundImage from '/assets/teddy/images/background/back1.png';
+import Contact from '@/components/Contact';
+import { contactList } from './data/contactList';
+import Skills from '@/components/skills';
+import { skillList } from './data/skillList';
 
 export default function Teddy() {
+  var color1 = 'from-slate-200 via-[#ECBD00] to-[#FFDF00]';
+  var color2 = 'from-slate-200 via-[#AB855A] to-[#AB855A]';
+
+  const [bgColor, setBgColor] = useState(color1);
+
   return (
-    <main className='flex flex-col w-full bg-gradient-to-br  from-[#3E97D1] via-violet-500 to-[#3F6D8C] min-h-screen  mx-auto'>
-      <p>Hello</p>
+    <main className={`flex flex-col w-full bg-gradient-to-br ${bgColor} min-h-screen mx-auto`}>
+      <SaveContacts
+        name='Tewodros Tewodros'
+        contactInfo='/teddy/files/Tewodros-Demis.vcf'
+        image={logo}
+        color={`bg-gradient-to-br ${bgColor}`}
+        imageWidth='w-20'
+        textColor='text-black'
+      />
+      <Profile
+        name="Tewodros Demis"
+        textColor1="text-[#062D3D]"
+        textColor2="text-white"
+        position='General Manager'
+        work="Tewodros Dolomite Mining and Supply "
+        image={backgroundImage} />
+      <section className="flex flex-col gap-8 w-full bg-white px-5 md min-h-screen py-5">
+        <Contact list={contactList} />
+        <hr className="text-black bg-black border border-black rounded-full w-5/6 mx-auto" />
+        <Skills skill={skillList} />
+      </section>
+
     </main>
   )
 }

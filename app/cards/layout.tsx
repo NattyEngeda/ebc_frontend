@@ -10,7 +10,7 @@ export default function CardsLayout({ children }: {
   return (
     <MantineProvider>
       <NextUIProvider>
-        <div className=''>
+        <div>
           {children}
         </div>
       </NextUIProvider>

@@ -1,12 +1,11 @@
 "use client"
 
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
-// Images
-import back from '/assets/girma/images/background/back.png';
 
-const Profile = () => {
+
+const Profile = ({ name, position, work, image, textColor1, textColor2 }: { name: string, position: string, work: string, image: StaticImageData, textColor1: string, textColor2: string }) => {
     const myLoader = ({ src, width, quality }: any) => {
         return `${src}?w=${width}&q=${quality || 75}`
     }
@@ -24,16 +23,16 @@ const Profile = () => {
                             <Image
                                 className=""
                                 loader={myLoader}
-                                src={back}
-                                alt="Girma Logo"
+                                src={image}
+                                alt={`${name} Logo`}
                                 width={500}
                                 height={500}
                             />
                         </div>
                         <div className='absolute flex flex-col items-start justify-start gap-1 z-20 top-0 left-0 py-5 px-5'>
-                            <h1 className='text-3xl text-[#267E7C] font-bold'>Girma Atlabachew</h1>
-                            <p className='text-2xl text-[#303642] font-bold'>General Manager</p>
-                            <p className='text-lg text-black font-light'>Sanitary and Mechanical <br />Contractor</p>
+                            <h1 className={`text-3xl  font-bold ${textColor1}`}>{name}</h1>
+                            <p className='text-2xl text-[#303642] font-bold'>{position}</p>
+                            <p className={`text-lg  font-light w-4/5 ${textColor2}`}>{work}</p>
                         </div>
                     </div>
                 </div>

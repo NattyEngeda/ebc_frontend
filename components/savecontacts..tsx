@@ -1,24 +1,22 @@
 "use client"
 
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { saveAs } from "file-saver";
-
-// Images
-import logo from '/assets/girma/images/logo/logo.png';
 
 const myLoader = ({ src, width, quality }: any) => {
     return `${src}?w=${width}&q=${quality || 75}`
 }
 
-const saveFile = async () => {
-    saveAs(
-        "/girma/files/Girma Atlabachew.vcf",
-        "GrimaAtlabachew"
-    );
-};
+const SaveContacts = ({
+    name, contactInfo, image, color, imageWidth, textColor }: { name: string, contactInfo: string, image: StaticImageData, color: string, imageWidth: string, textColor: string }) => {
+    const saveFile = async () => {
+        saveAs(
+            contactInfo,
+            name
+        );
+    };
 
-const SaveContacts = () => {
     return (
         <div
             className="w-full md:w-2/4 h-auto px-5 py-5">
@@ -26,9 +24,9 @@ const SaveContacts = () => {
                 className="w-full h-16 rounded-xl bg-white flex flex-row items-center justify-between px-2 shadow-xl">
                 <div>
                     <Image
-                        className="w-12"
+                        className={imageWidth}
                         loader={myLoader}
-                        src={logo}
+                        src={image}
                         alt={'Ethio Grace Enginerring'}
                         width={500}
                         height={500}
@@ -36,7 +34,8 @@ const SaveContacts = () => {
                 </div>
                 <button
                     onClick={saveFile}
-                    className="px-2 py-3 text-sm  bg-gradient-to-br from-slate-700 via-violet-500 to-purple-700 text-white rounded-lg"> Save Contact</button>
+                    className={`px-2 py-3 text-sm  rounded-lg ${color} ${textColor}`}>
+                    Save Contact</button>
             </div>
         </div>
     );

@@ -5,7 +5,7 @@ import Contact from '@/components/Contact';
 import Skills from '@/components/Skills';
 import Gallery from '@/components/Gallery';
 import Clients from '@/components/Clients';
-import OfficeLoaction from '@/components/Location';
+import OfficeLoaction from '@/components/OfficeLocation';
 import Message from '@/components/Message';
 import Social from '@/components/Social';
 import Footer from '@/components/Footer';

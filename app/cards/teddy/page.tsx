@@ -24,10 +24,6 @@ import { galleryList } from './data/galleryList';
 import { clientList } from './data/clientList';
 import { socialList } from './data/socialList';
 
-
-
-
-
 export default function Teddy() {
   var color1 = 'from-slate-200 via-[#ECBD00] to-[#FFDF00]';
   var color2 = 'from-slate-200 via-[#AB855A] to-[#AB855A]';

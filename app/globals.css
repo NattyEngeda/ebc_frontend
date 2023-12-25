@@ -23,4 +23,10 @@
   .socialicons {
     @apply w-6 h-6 text-white;
   }
+
 }
+
+
+/* * {
+  border: 1px solid black;
+} */

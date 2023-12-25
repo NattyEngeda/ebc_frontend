@@ -13,6 +13,7 @@
     "@mantine/core": "^7.1.5",
     "@mantine/hooks": "^7.1.5",
     "@nextui-org/react": "^2.2.9",
+    "@tabler/icons-react": "^2.44.0",
     "axios": "^1.5.1",
     "embla-carousel-react": "^7.1.0",
     "file-saver": "^2.0.5",
